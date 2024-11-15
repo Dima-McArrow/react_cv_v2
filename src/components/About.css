@@ -1,0 +1,281 @@
+.section_about {
+  padding: 50px 0;
+  width: 95%;
+  margin: 0.5rem auto 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  min-height: 100vh;
+}
+
+.section_about .about_container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.about_left,
+.about_right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.about_left {
+  justify-content: space-evenly;
+  height: 70vh;
+  animation: leftSlideIn 1s ease-in forwards;
+}
+
+.about_right {
+  animation: rightSlideIn 1s ease-in forwards;
+}
+
+.dima,
+.makarov {
+  font-size: 2.5rem;
+  width: 17rem;
+  display: flex;
+  color: #c5c6c7;
+}
+
+.dima {
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  right: 150%;
+  opacity: 0;
+  animation: dimaAppear 1s ease-in 1s forwards;
+}
+
+.makarov {
+  justify-content: end;
+  align-items: center;
+  position: relative;
+  left: 130%;
+  opacity: 0;
+  animation: makarovAppear 1s ease-in 1s forwards;
+}
+
+/* Base container styling */
+.picture_container {
+  position: relative;
+  width: 250px; /* Container width */
+  height: 250px; /* Container height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0 0 0.2rem #45a29e); /* Shadow effect */
+}
+
+.border_container {
+  position: absolute;
+  width: 250px; /* Container width */
+  height: 250px; /* Container height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotateContainerReverse 13s ease-in-out infinite forwards;
+}
+
+/* SVG frame styling */
+.picture_frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #45a29e; /* Frame color */
+  stroke-width: 5;
+  stroke-dasharray: 27;
+  stroke-dashoffset: 97;
+  animation: animateBorder 3s ease-in-out infinite alternate;
+  transition: stroke-dashoffset 2s;
+}
+
+.picture_frame_reverse {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #45a29e; /* Frame color */
+  stroke-width: 5;
+  stroke-dasharray: 17;
+  stroke-dashoffset: 67;
+  animation: animateBorder 3s ease-in-out infinite alternate;
+  transition: stroke-dashoffset 2s;
+}
+
+/* Picture styling */
+.picture {
+  width: 90.5%;
+  height: 90.5%;
+  background-image: url("../../Picture\ copy.jpg"); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%; /* Match the rounded corners of the SVG frame */
+  filter: grayscale(100%); /* Grayscale effect */
+  position: relative;
+  z-index: 3;
+}
+
+.summary_title {
+  font-size: 2rem;
+  color: #45a29e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.download_cv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #0b0c10;
+  margin-top: 7rem;
+}
+
+p.summary_text {
+  color: #c5c6c7;
+  text-align: start;
+}
+
+.summary_text_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+span.tag {
+  color: #f13c20;
+  font-size: 3rem;
+}
+
+span.closing_slash {
+  color: #f13c20;
+  font-size: 2rem;
+}
+
+@media (prefers-color-scheme: light) {
+  .section_about {
+    border: 1px solid rgb(21, 255, 0);
+  }
+}
+
+/* Keyframes for the SVG frame animation */
+@keyframes animateBorder {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes rotateContainer {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateContainerReverse {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes leftSlideIn {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes rightSlideIn {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes dimaAppear {
+  0% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    right: 20%;
+  }
+}
+
+@keyframes makarovAppear {
+  0% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    left: 30%;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .border_container {
+    animation: rotateContainerReverse 33s ease-in-out infinite forwards;
+  }
+  .picture_frame {
+    animation: animateBorder 20s ease-in-out infinite alternate;
+  }
+
+  .picture_frame_reverse {
+    animation: animateBorder 20s ease-in-out infinite alternate;
+  }
+}
+
+@media (max-width: 768px) {
+  .section_about .about_container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .dima {
+    font-size: 2rem;
+    width: 15rem;
+    right: 20%;
+  }
+
+  .makarov {
+    font-size: 2rem;
+    width: 13rem;
+    left: 19%;
+  }
+
+  .about_left,
+  .about_right {
+    width: 100%;
+  }
+}
