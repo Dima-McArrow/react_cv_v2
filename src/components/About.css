@@ -6,6 +6,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  -webkit-user-select: none;
   user-select: none;
   min-height: 100vh;
 }
@@ -129,6 +130,7 @@
   filter: grayscale(100%); /* Grayscale effect */
   position: relative;
   z-index: 3;
+  background-blend-mode: saturation;
 }
 
 .summary_title {

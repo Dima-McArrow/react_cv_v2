@@ -3,7 +3,7 @@ import "./Navbar.css";
 export const Navbar = () => {
   return (
     <nav>
-      <a href="#1">About</a>
+      <a href="#about">About</a>
       <a href="#1">Skills</a>
       <a href="#1">Projects</a>
       <a href="#experience">Experience</a>
