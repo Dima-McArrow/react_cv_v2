@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: space-around;
   gap: 5rem;
-  position: fixed;
+  position: absolute;
   top: -10rem;
   animation: headerAppear 1s ease-in forwards;
   right: 0;

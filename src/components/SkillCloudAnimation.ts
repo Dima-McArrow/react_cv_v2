@@ -121,7 +121,7 @@ export function initSkillCloudAnimation() {
     "/src/svg/npm.svg",
     "/src/svg/vitejs.svg",
     "/src/svg/vsc.svg",
-    "/src/svg/tailwinds.svg",
+    "/src/svg/tailwindcss.svg",
     "/src/svg/nginx.svg",
     "/src/svg/debian.svg",
     "/src/svg/blender.svg",

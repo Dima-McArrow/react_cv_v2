@@ -25,15 +25,12 @@ export const Contact = () => {
               required
             />
           </div>
-          <div className="emai-input_wrapper">
-            <label htmlFor="user_email" className="contact_label">
-              Email<sup>*</sup>
-            </label>
+          <div className="email-input_wrapper">
             <input
               name="user_email"
               className="contact_input"
               type="email"
-              placeholder="Email"
+              placeholder="Enter your email please ..."
               required
               pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
             />

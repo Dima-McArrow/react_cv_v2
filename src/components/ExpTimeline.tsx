@@ -40,20 +40,10 @@ export const ExpTimeline = () => {
         <div className="timeline-item">
           <div className="circle"></div>
           <div className="content">
-            <h3>Web Developer</h3>
-            <p>Company A — Jan 2020 - Present</p>
-            <p>
-              Worked on creating interactive, user-friendly web applications.
-            </p>
-            <p>
-              Worked on creating interactive, user-friendly web applications.
-            </p>
-            <p>
-              Worked on creating interactive, user-friendly web applications.
-            </p>
-            <p>
-              Worked on creating interactive, user-friendly web applications.
-            </p>
+            <p>Jan 2020 - Present</p>
+            <h3>Assistant production</h3>
+            <p>Ezra Productions</p>
+            <p>Film "Edmond"</p>
           </div>
         </div>
         <div className="timeline-item">
