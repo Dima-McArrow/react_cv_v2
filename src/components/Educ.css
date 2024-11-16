@@ -32,7 +32,7 @@
   background-color: var(
     --card_bg-color
   ); /* Background that aligns with theme */
-  color: var(--tertiary-color); /* Text color for readability */
+  color: #8b8b8b; /* Text color for readability */
   box-shadow: var(--shadow-color); /* Adds subtle depth */
   cursor: pointer;
   user-select: none;
@@ -43,7 +43,7 @@
 }
 
 .educ-card h3 {
-  color: var(--primary-color);
+  color: #8b8b8b;
   margin-bottom: 2rem;
   padding: 0.3rem;
 }
@@ -53,8 +53,7 @@
 }
 
 .educ-card:hover {
-  transform: translateY(-1rem);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  transform: scale(1.05);
 }
 
 .school {

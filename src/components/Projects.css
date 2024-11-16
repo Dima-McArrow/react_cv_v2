@@ -18,17 +18,21 @@
 }
 
 .card {
+  align-items: center;
   background: #1f2833;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   max-width: 400px;
   transition: transform 0.3s, box-shadow 0.3s;
+  height: 37rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
 }
 
 .card img {
@@ -42,10 +46,11 @@
 }
 
 .card-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #45a29e;
-  margin-bottom: 10px;
+  gap: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .card-description {
@@ -60,7 +65,38 @@
   align-items: center;
 }
 
+.card-buttons a {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card-buttons svg path {
+  fill: #45a29e;
+}
+
 .projects_list_p {
   margin-bottom: 3rem;
   color: #c5c6c7;
+}
+
+.card_title_wrapper {
+  height: 7rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+img.card-badge {
+  height: 1rem;
+  width: auto;
+}
+
+h2.card-title {
+  line-height: 1;
+  height: 3rem;
 }

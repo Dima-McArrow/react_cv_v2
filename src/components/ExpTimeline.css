@@ -76,8 +76,14 @@
 /* Content styling */
 .timeline-item .content h3 {
   font-size: 1.2em;
-  color: #333;
+  color: #45a29e;
   margin: 0;
+}
+
+.timeline-item .content h5 {
+  font-size: 1em;
+  color: #c5c6c7;
+  margin: 0.5em 0;
 }
 
 .timeline-item .content p {

@@ -8,6 +8,7 @@ import { Projects } from "./components/Projects";
 import { Educ } from "./components/Educ";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import ToTopButton from "./components/ToTop";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Educ />
       <Contact />
       <Footer />
+      <ToTopButton />
     </>
   );
 }

@@ -28,6 +28,10 @@ a:hover {
   filter: drop-shadow(0 0 0.5em #45a29e);
 }
 
+a:hover path {
+  stroke: #66fcf1;
+}
+
 body {
   margin: 0;
   display: flex;

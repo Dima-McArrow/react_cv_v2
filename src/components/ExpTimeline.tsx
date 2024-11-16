@@ -12,7 +12,8 @@ export const ExpTimeline = () => {
           <div className="content">
             <p>Jan 2020 - Present</p>
             <h3>Web Developer</h3>
-            <p>GitHub projects</p>
+            <h5>GitHub projects</h5>
+            <p>Courbevoie, France</p>
             <p>
               Worked on creating interactive, user-friendly web applications.
             </p>
@@ -23,7 +24,8 @@ export const ExpTimeline = () => {
           <div className="content">
             <p>June 2018 - December 2022</p>
             <h3>Hotel receptionist</h3>
-            <p>Executive Hotel</p>
+            <h5>Executive Hotel</h5>
+            <p>Gennevillers, France</p>
             <p>
               Assurer l'accueil avec élégance et professionnalisme dans un
               établissement de 82 chambres et suites, gestion de l'accueil, de
@@ -42,18 +44,65 @@ export const ExpTimeline = () => {
           <div className="content">
             <p>Jan 2020 - Present</p>
             <h3>Assistant production</h3>
-            <p>Ezra Productions</p>
+            <p>Paris, France</p>
+            <h5>Ezra Productions</h5>
             <p>Film "Edmond"</p>
           </div>
         </div>
         <div className="timeline-item">
           <div className="circle"></div>
           <div className="content">
-            <h3>Web Developer</h3>
-            <p>Company A — Jan 2020 - Present</p>
-            <p>
-              Worked on creating interactive, user-friendly web applications.
-            </p>
+            <p>Jan 2020 - Present</p>
+            <h3>Assistant production</h3>
+            <p>Paris, France</p>
+            <h5>EAUX VIVES PRODUCTIONS</h5>
+            <p>Film "Soumission"</p>
+          </div>
+        </div>
+        <div className="timeline-item">
+          <div className="circle"></div>
+          <div className="content">
+            <p>Jan 2020 - Present</p>
+            <h3>Assistant production</h3>
+            <p>Paris, France</p>
+            <h5>EAUX VIVES PRODUCTIONS</h5>
+            <p>Film "Soumission"</p>
+          </div>
+        </div>
+        <div className="timeline-item">
+          <div className="circle"></div>
+          <div className="content">
+            <p>Jan 2020 - Present</p>
+            <h3>Assistant production</h3>
+            <h5>EAUX VIVES PRODUCTIONS</h5>
+            <p>Film "Soumission"</p>
+          </div>
+        </div>
+        <div className="timeline-item">
+          <div className="circle"></div>
+          <div className="content">
+            <p>Jan 2020 - Present</p>
+            <h3>Assistant production</h3>
+            <h5>EAUX VIVES PRODUCTIONS</h5>
+            <p>Film "Soumission"</p>
+          </div>
+        </div>
+        <div className="timeline-item">
+          <div className="circle"></div>
+          <div className="content">
+            <p>Jan 2020 - Present</p>
+            <h3>Assistant production</h3>
+            <h5>EAUX VIVES PRODUCTIONS</h5>
+            <p>Film "Soumission"</p>
+          </div>
+        </div>
+        <div className="timeline-item">
+          <div className="circle"></div>
+          <div className="content">
+            <p>Jan 2020 - Present</p>
+            <h3>Assistant production</h3>
+            <h5>EAUX VIVES PRODUCTIONS</h5>
+            <p>Film "Soumission"</p>
           </div>
         </div>
       </div>

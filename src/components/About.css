@@ -152,7 +152,24 @@ button.download_cv {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  color: #0b0c10;
+}
+
+a.cta-button {
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #45a29e;
+  padding: 1rem;
+}
+
+.cta-button:active {
+  transform: scale(0.95);
+}
+
+.download_icon path {
+  stroke: #45a29e;
 }
 
 p.summary_text {
@@ -265,7 +282,7 @@ span.closing_slash {
 
 @media (max-width: 768px) {
   .section_about .about_container {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 2rem;
   }
 
