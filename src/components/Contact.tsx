@@ -1,10 +1,13 @@
 import "./Contact.css";
+import { Social } from "./Social";
 
 export const Contact = () => {
   return (
     <section id="contact" className="section_contact">
       <div className="contact-form_wrapper">
-        <h3 className="contact_title">Contact me</h3>
+        <h2>
+          contactMe<span className="brackets">()</span>
+        </h2>
         <form
           id="resume-contact_form"
           action="https://formspree.io/f/xqakqyre"
@@ -49,6 +52,7 @@ export const Contact = () => {
           </button>
         </form>
       </div>
+      <Social />
     </section>
   );
 };

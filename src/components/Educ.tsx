@@ -157,7 +157,9 @@ Web and mobile web developer</p>
   return (
     <section id="education" className="section_education">
       <div className="educ_wrapper">
-        <h3 className="educ_title">EDUCATION</h3>
+        <h2>
+          education<span className="brackets">()</span>
+        </h2>
         <div className="educ-cards_wrapper">
           <div className="educ-card studi" onClick={handleStudiClick}>
             <h3>

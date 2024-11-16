@@ -1,3 +1,14 @@
+.section_projects {
+  margin: 0 auto 5rem auto;
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  min-height: 100vh;
+}
+
 .card-container {
   display: flex;
   flex-wrap: wrap;
