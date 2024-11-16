@@ -1,0 +1,14 @@
+.section_skill_cloud {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  user-select: none;
+  position: relative;
+}
+
+.skill_cloud_title {
+  position: absolute;
+}

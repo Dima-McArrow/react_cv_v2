@@ -9,6 +9,11 @@ export const SkillCloud = () => {
 
   return (
     <section id="skill_cloud" className="section_skill_cloud">
+      <div className="skill_cloud_title">
+        <h2>
+          skillsCloud<span className="brackets">()</span>
+        </h2>
+      </div>
       <div id="skill_cloud_container"></div>
     </section>
   );
