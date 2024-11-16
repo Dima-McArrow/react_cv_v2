@@ -11,6 +11,10 @@
   min-height: 100vh;
 }
 
+article {
+  width: 100%;
+}
+
 .section_about .about_container {
   width: 100%;
   display: flex;
@@ -18,6 +22,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  gap: 3rem;
 }
 
 .about_left,
@@ -39,6 +44,7 @@
 
 .about_right {
   animation: rightSlideIn 1s ease-in forwards;
+  align-self: baseline;
 }
 
 .dima,
@@ -147,7 +153,6 @@ button.download_cv {
   justify-content: center;
   gap: 0.5rem;
   color: #0b0c10;
-  margin-top: 7rem;
 }
 
 p.summary_text {

@@ -1,15 +1,43 @@
-import Typewriter from 'typewriter-effect';
+import Typewriter from "typewriter-effect";
+import "./Message.css";
 
 export const TypewriterComponent = () => {
   return (
-    <div>
+    <div className="typewriterText_div">
       <Typewriter
         onInit={(typewriter) => {
           typewriter
             .changeDelay(70)
-            .typeString('<code>print(<strong>whoami</strong>)</code>')
+            .pauseFor(2200)
+            .typeString(
+              '<code>const <span style="color: #ab0cf0;">whoAmI</span> = {<span style="color: #c7be10">Dima Makarov</span>};</code>'
+            )
+            .pauseFor(1500)
+            .callFunction(() => {
+              // Manually clear content instantly
+              const typewriterContainer = document.querySelector(
+                ".Typewriter__wrapper"
+              );
+              if (typewriterContainer) {
+                typewriterContainer.innerHTML = ""; // Clear text instantly
+              }
+            })
+            .typeString(
+              '<code>console.<span style="color: #27ae60;">log</span>(<span style="color: #ab0cf0;">whoAmI</span>);</code>'
+            )
+            .pauseFor(1000)
+            .callFunction(() => {
+              // Manually clear content instantly
+              const typewriterContainer = document.querySelector(
+                ".Typewriter__wrapper"
+              );
+              if (typewriterContainer) {
+                typewriterContainer.innerHTML = ""; // Clear text instantly
+              }
+            })
             .pauseFor(250)
-            .typeString(`
+            .pasteString(
+              `
                 <br />Throughout my career, I have successfully combined creativity,
                 technology, and service. With experience in marketing and
                 audiovisual production, I have learned to tell stories and
@@ -19,9 +47,10 @@ export const TypewriterComponent = () => {
                 engaging digital experiences. My journey, which has taken me
                 from business to cinema and now to web development, reflects my
                 commitment to creativity, service, and lifelong learning.
-                `)
+                `,
+              null
+            )
             .pauseFor(2500)
-            .typeString('<br /><strong>only <span style="color: #27ae60;">5kb</span> Gzipped!</strong>')
             .stop()
             .start();
         }}
@@ -29,5 +58,3 @@ export const TypewriterComponent = () => {
     </div>
   );
 };
-
-

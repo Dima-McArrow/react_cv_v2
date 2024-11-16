@@ -1,0 +1,212 @@
+.educ_wrapper {
+  width: 80%;
+  margin-bottom: 3rem;
+}
+
+.educ-cards_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.educ-card {
+  width: 17rem;
+  height: 30rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.5s;
+  background-color: var(
+    --card_bg-color
+  ); /* Background that aligns with theme */
+  color: var(--tertiary-color); /* Text color for readability */
+  box-shadow: var(--shadow-color); /* Adds subtle depth */
+  cursor: pointer;
+  user-select: none;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.educ-card h3 {
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  padding: 0.3rem;
+}
+
+.country {
+  color: #8b8b8b;
+}
+
+.educ-card:hover {
+  transform: translateY(-1rem);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.educ_title {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: var(--primary-color); /* Title matches primary color for pop */
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.school {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.active-studi {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  width: 500px;
+}
+
+.studi-backdrop,
+.mitro-backdrop,
+.isg-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Dims the background */
+  z-index: 1000; /* Ensures it's behind the modal but on top of everything else */
+}
+
+.studi-modal,
+.mitro-modal,
+.isg-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--body_bg-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 90%;
+  width: 800px;
+  height: 600px;
+  z-index: 1001; /* Sits above the backdrop */
+  cursor: unset;
+}
+
+.studi-modal hr,
+.mitro-modal hr,
+.isg-modal hr {
+  border: 1px solid var(--primary-color);
+  width: 100%;
+}
+
+.studi-modal_image,
+.mitro-modal_image,
+.isg-modal_image {
+  width: 10rem;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.studi-modal_image img,
+.mitro-modal_image img,
+.isg-modal_image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.studi-modal_content,
+.mitro-modal_content,
+.isg-modal_content {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100%;
+  padding: 3rem;
+  cursor: initial;
+  user-select: none;
+  align-items: center;
+}
+
+.studi-modal_title,
+.mitro-modal_title,
+.isg-modal_title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.studi-modal_description,
+.mitro-modal_description,
+.isg-modal_description {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.studi-modal_close,
+.mitro-modal_close,
+.isg-modal_close {
+  color: var(--quaternary-color); /* High contrast text color */
+  background-color: var(
+    --primary-color
+  ); /* Primary color for button background */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 20%;
+  margin: 0 auto;
+}
+
+.studi-modal_close:hover,
+.mitro-modal_close:hover,
+.isg-modal_close:hover {
+  background-color: var(--focus-color); /* Highlighted focus color on hover */
+  color: var(--body_bg-color);
+}
+
+ul.studi-modal_list,
+ul.mitro-modal_list,
+ul.isg-modal_list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  padding: 0 3rem;
+  text-align: justify;
+}
+
+ul.studi-modal_list li,
+ul.mitro-modal_list li,
+ul.isg-modal_list li {
+  margin: 1rem 0;
+}
+
+@media screen and (max-width: 600px) {
+  .educ-cards_wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .studi-modal_close,
+  .mitro-modal_close,
+  .isg-modal_close {
+    width: 69%;
+  }
+
+  .studi-modal,
+  .mitro-modal,
+  .isg-modal {
+    height: 700px;
+  }
+}

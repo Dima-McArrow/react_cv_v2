@@ -2,7 +2,7 @@ import "./ExpTimeline.css";
 
 export const ExpTimeline = () => {
   return (
-    <section id="experience">
+    <section id="experience" className="section_experience">
       <h2>
         experience<span className="brackets">()</span>
       </h2>

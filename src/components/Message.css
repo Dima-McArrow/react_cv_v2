@@ -1,0 +1,20 @@
+.Typewriter {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  letter-spacing: 0.15em;
+}
+
+.typewriterText_div {
+  width: 30rem;
+  height: 30rem;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .typewriterText_div {
+    width: 22rem;
+    height: 37rem;
+    text-align: left;
+  }
+}

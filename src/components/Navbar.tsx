@@ -4,11 +4,11 @@ export const Navbar = () => {
   return (
     <nav>
       <a href="#about">About</a>
-      <a href="#1">Skills</a>
-      <a href="#1">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
       <a href="#experience">Experience</a>
-      <a href="#1">Education</a>
-      <a href="#1">Contact</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
     </nav>
   );
 };
