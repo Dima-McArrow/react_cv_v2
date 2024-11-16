@@ -56,7 +56,7 @@ export const About = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-                Download CV (PDF)
+                CV (PDF)
               </a>
             </div>
           </div>

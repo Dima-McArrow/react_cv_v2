@@ -129,7 +129,7 @@ article {
 .picture {
   width: 90.5%;
   height: 90.5%;
-  background-image: url("../../Picture\ copy.jpg"); /* Replace with your image */
+  background-image: url("../me_one.jpg"); /* Replace with your image */
   background-size: cover;
   background-position: center;
   border-radius: 50%; /* Match the rounded corners of the SVG frame */
