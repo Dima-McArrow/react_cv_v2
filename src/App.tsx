@@ -3,6 +3,7 @@ import { About } from "./components/About";
 import { ExpTimeline } from "./components/ExpTimeline";
 import { Header } from "./components/Header";
 import { Skills } from "./components/Skills";
+import { SkillCloud } from "./components/SkillCloud";
 import { Projects } from "./components/Projects";
 import { Educ } from "./components/Educ";
 import { Contact } from "./components/Contact";
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <About />
       <Skills />
+      <SkillCloud />
       <Projects />
       <ExpTimeline />
       <Educ />
