@@ -59,6 +59,10 @@
   padding-right: 2em;
 }
 
+.timeline-item:nth-child(odd) .banner {
+  justify-content: flex-end;
+}
+
 /* Right-aligned items (even) */
 .timeline-item:nth-child(even) {
   left: 50%;
@@ -91,8 +95,85 @@
   color: #666;
 }
 
+/* Banner Design */
+.banner {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.date {
+  width: 80px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #1f2833; /* Unified color for start and end */
+}
+
+.connector {
+  width: 40px;
+  height: 30px;
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.connector::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent; /* Half the height of the date boxes */
+  border-bottom: 15px solid transparent; /* Half the height of the date boxes */
+  border-left: 40px solid #1f2833; /* Connector color */
+  z-index: 1;
+}
+
+.connector::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 40px solid #0b0c10;
+  right: -11px;
+  background-color: #1f2833;
+}
+
+.right {
+  width: 95px;
+  height: 30px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: bold;
+  color: #c5c6c7;
+  padding-right: 0.5rem;
+}
+
+.left {
+  width: 80px;
+  height: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: bold;
+  color: #c5c6c7;
+  padding-left: 0.5rem;
+}
+
 /* Mobile view */
 @media (max-width: 768px) {
+  .section_experience {
+    margin: 7rem auto 5rem auto;
+  }
   .timeline {
     width: 100%; /* Full width on mobile */
     margin: 0;
@@ -144,6 +225,9 @@
 
   .timeline-item:nth-child(even) .content {
     padding-right: 2em;
+  }
+  .timeline-item:nth-child(odd) .banner {
+    justify-content: start;
   }
 }
 

@@ -1,7 +1,7 @@
-nav {
+#desktop_nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: inherit;
   padding: 1rem 2rem;
   width: 50%;
 }

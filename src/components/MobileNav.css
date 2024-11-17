@@ -1,0 +1,12 @@
+#mobile_nav {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 1rem 2rem;
+  width: 50%;
+}
+
+.mobile_menu circle,
+.mobile_menu rect {
+  stroke: #45a29e;
+}

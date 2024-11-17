@@ -136,12 +136,13 @@ export function initSkillCloudAnimation() {
     "/src/svg/material-ui.svg",
     "/src/svg/neovim.svg",
     "/src/svg/python.svg",
+    "/src/svg/svg.svg",
   ];
 
   icons.forEach(loadIcon);
 
   // Position the camera
-  camera.position.z = 15;
+  camera.position.z = window.innerWidth < 768 ? 11 : 15;
 
   // Add OrbitControls
   const controls = new OrbitControls(camera, renderer.domElement);
@@ -190,10 +191,28 @@ export function initSkillCloudAnimation() {
   }
   animate();
 
-  // Handle window resize
-  window.addEventListener("resize", () => {
-    camera.aspect = window.innerWidth / window.innerHeight;
+  window.addEventListener("resize", adjustCanvasSize);
+
+  function adjustCanvasSize() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    // Adjust renderer and camera for mobile
+    if (width < 768) {
+      const aspectRatio = 9 / 16; // Aspect ratio for mobile (portrait mode)
+      const mobileHeight = width * aspectRatio;
+      renderer.setSize(width, mobileHeight);
+      camera.aspect = width / mobileHeight;
+      camera.position.z = 11; // Adjust camera position for mobile
+    } else {
+      renderer.setSize(width, height);
+      camera.aspect = width / height;
+      camera.position.z = 15;
+    }
+
     camera.updateProjectionMatrix();
-    renderer.setSize(window.innerWidth, window.innerHeight);
-  });
+  }
+
+  // Initial adjustment
+  adjustCanvasSize();
 }

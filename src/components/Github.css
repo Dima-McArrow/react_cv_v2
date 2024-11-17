@@ -1,0 +1,76 @@
+.github-skill_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 50%;
+  z-index: 99999;
+  border: 1px solid #45a29e;
+}
+
+.github-skill_container::after {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  inset: -3px;
+  border-radius: inherit;
+  background: conic-gradient(#45a29e var(--fill), transparent var(--fill));
+  transition: --fill 0.6s ease-in-out;
+}
+
+.the_github-link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  aspect-ratio: 1;
+  font-size: 1.5rem;
+  background-color: #1f2833;
+  border-radius: 50%;
+  transition: color 0.5s ease-in-out;
+}
+
+.github_desk {
+  position: absolute;
+  z-index: 99999;
+  top: -148%;
+  right: 108.5%;
+  padding: 1rem;
+  border: 1px solid;
+  border-radius: 5px;
+  border-color: #8b8b8b;
+  will-change: opacity;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: #8b8b8b;
+  cursor: initial;
+  user-select: none;
+  pointer-events: none;
+}
+
+.github-skill_container:hover ~ div.github_desk {
+  opacity: 1;
+}
+
+.github-skill_container:hover::after {
+  --fill: 100%;
+  background: conic-gradient(#45a29e var(--fill), transparent var(--fill));
+}
+
+.the_github-link > svg path {
+  fill: #45a29e;
+}
+
+.the_github-link:hover > svg path {
+  filter: drop-shadow(0 0 2em var(--focus-color));
+  fill: #66fcf1;
+  transition: all 0.6s;
+  stroke: #66fcf1;
+}
+
+@media screen and (max-width: 600px) {
+  .github_desk {
+    display: none;
+  }
+}

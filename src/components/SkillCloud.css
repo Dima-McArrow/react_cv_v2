@@ -12,3 +12,22 @@
 .skill_cloud_title {
   position: absolute;
 }
+
+#skill_cloud_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  #skill_cloud_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skill_cloud_title {
+    position: absolute;
+    top: 103px;
+  }
+}

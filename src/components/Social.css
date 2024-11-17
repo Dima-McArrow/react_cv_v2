@@ -3,4 +3,6 @@
   justify-content: center;
   position: relative;
   top: 3rem;
+  z-index: 0;
+  gap: 2rem;
 }

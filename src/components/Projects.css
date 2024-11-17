@@ -23,26 +23,31 @@
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  max-width: 400px;
+  max-width: 445px;
   transition: transform 0.3s, box-shadow 0.3s;
   height: 37rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
+  padding-bottom: 3rem;
 }
 
 .card:hover {
   transform: scale(1.02);
 }
 
+.card-image_wrapper {
+  height: 50%;
+}
+
 .card img {
   width: 100%;
-  height: 213px;
   object-fit: contain;
 }
 
 .card-content {
   padding: 20px;
+  height: 50%;
 }
 
 .card-title {
@@ -71,6 +76,14 @@
   font-size: 0.9rem;
   cursor: pointer;
   transition: background-color 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-buttons:hover svg path {
+  fill: #66fcf1;
 }
 
 .card-buttons svg path {
@@ -99,4 +112,13 @@ img.card-badge {
 h2.card-title {
   line-height: 1;
   height: 3rem;
+}
+
+@media screen and (max-width: 600px) {
+  .section_projects {
+    margin: -181px auto 5rem auto;
+  }
+  .card {
+    min-height: 40rem;
+  }
 }

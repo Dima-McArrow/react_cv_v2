@@ -281,9 +281,16 @@ span.closing_slash {
 }
 
 @media (max-width: 768px) {
+  .section_about {
+    flex-direction: column;
+    gap: 2rem;
+    margin: 1.5rem auto 0 auto;
+  }
+
   .section_about .about_container {
     flex-direction: column-reverse;
     gap: 2rem;
+    margin: 1.5rem auto 0 auto;
   }
 
   .dima {
@@ -301,5 +308,9 @@ span.closing_slash {
   .about_left,
   .about_right {
     width: 100%;
+  }
+
+  .about_right {
+    margin-bottom: 7rem;
   }
 }

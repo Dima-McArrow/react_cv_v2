@@ -12,7 +12,7 @@ import ToTopButton from "./components/ToTop";
 
 function App() {
   return (
-    <>
+    <main>
       <Header />
       <About />
       <Skills />
@@ -23,7 +23,7 @@ function App() {
       <Contact />
       <Footer />
       <ToTopButton />
-    </>
+    </main>
   );
 }
 

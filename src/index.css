@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 
+@property --fill {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0%;
+}
+
 :root {
   font-family: Roboto Mono, monospace;
   line-height: 1.5;
@@ -26,6 +32,11 @@ a {
 a:hover {
   color: #66fcf1;
   filter: drop-shadow(0 0 0.5em #45a29e);
+}
+
+a:active {
+  color: #66fcf1;
+  transform: scale(0.95);
 }
 
 a:hover path {
@@ -57,7 +68,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #66fcf1;
 }
 button:focus,
 button:focus-visible {
