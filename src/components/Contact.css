@@ -150,7 +150,7 @@ button.contact_button:hover {
   font-size: 0.8rem;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   .section_contact {
     margin: 37px auto 5rem auto;
   }

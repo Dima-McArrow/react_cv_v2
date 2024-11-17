@@ -25,7 +25,7 @@ export const Educ = () => {
           <p class="studi-modal_description">Professional title (TP) level 5,
 Web and mobile web developer</p>
           <hr />
-          <a href="https://studi.fr/" target="_blank" noopener>Visit Website</a>
+          <a href="https://studi.fr/" target="_blank" noopener>Visit school Website</a>
           <button class="studi-modal_close">Close</button>
         </div>
       `;
@@ -77,7 +77,7 @@ Web and mobile web developer</p>
           <hr />
           <p class="isg-modal_description">Higher National Diploma, Film/Video and Photographic Arts</p>
           <hr />
-          <a href="https://www.mitro-tv.ru/tv-school/" target="_blank" noopener>Visit Website</a>
+          <a href="https://www.mitro-tv.ru/tv-school/" target="_blank" noopener>Visit school Website</a>
           <button class="mitro-modal_close">Close</button>
         </div>
       `;
@@ -128,7 +128,7 @@ Web and mobile web developer</p>
           <p class="mitro-modal_description">Bachelor of Business Administration
 (BBA), Marketing</p>
           <hr />
-          <a href="https://www.isg.fr/" target="_blank" noopener>Visit Website</a>
+          <a href="https://www.isg.fr/" target="_blank" noopener>Visit school Website</a>
           <button class="isg-modal_close">Close</button>
         </div>
       `;
