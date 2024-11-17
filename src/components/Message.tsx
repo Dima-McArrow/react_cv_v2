@@ -10,7 +10,7 @@ export const TypewriterComponent = () => {
             .changeDelay(70)
             .pauseFor(2200)
             .typeString(
-              '<code>const <span style="color: #ab0cf0;">whoAmI</span> = {<span style="color: #c7be10">Dima Makarov</span>};</code>'
+              '<code>const <span class="whoAmI">whoAmI</span> = {<span class="dm_const">Dima Makarov</span>};</code>'
             )
             .pauseFor(1500)
             .callFunction(() => {
@@ -23,7 +23,7 @@ export const TypewriterComponent = () => {
               }
             })
             .typeString(
-              '<code>console.<span style="color: #27ae60;">log</span>(<span style="color: #ab0cf0;">whoAmI</span>);</code>'
+              '<code>console.<span class="console_log">log</span>(<span class="whoAmI">whoAmI</span>);</code>'
             )
             .pauseFor(1000)
             .callFunction(() => {

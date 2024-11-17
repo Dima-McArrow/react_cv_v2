@@ -139,7 +139,7 @@ export const ExpTimeline = () => {
               </div>
               <div className="connector"></div>
               <div className="date right">
-                <span>06 / 2015</span>
+                <span>04 / 2015</span>
               </div>
             </div>
             <h3>Producer Assistant</h3>
@@ -175,7 +175,7 @@ export const ExpTimeline = () => {
               </div>
               <div className="connector"></div>
               <div className="date right">
-                <span>11 / 2011</span>
+                <span>11 / 2010</span>
               </div>
             </div>
             <h3>Marketing Manager</h3>

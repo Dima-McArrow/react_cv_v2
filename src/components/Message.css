@@ -11,6 +11,44 @@
   text-align: left;
 }
 
+.Typewriter__wrapper {
+  color: #fff;
+}
+
+.whoAmI {
+  color: #f78cee;
+}
+
+.dm_const {
+  color: #d1bd06;
+}
+
+.console_log {
+  color: #6ae651;
+}
+
+@media (prefers-color-scheme: light) {
+  .Typewriter {
+    color: #000;
+  }
+
+  .Typewriter__wrapper {
+    color: #000;
+  }
+
+  .whoAmI {
+    color: #5a2a56;
+  }
+
+  .dm_const {
+    color: #524a08;
+  }
+
+  .console_log {
+    color: #2d4928;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .typewriterText_div {
     width: 22rem;

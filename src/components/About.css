@@ -183,18 +183,55 @@ p.summary_text {
 }
 
 span.tag {
-  color: #f13c20;
+  color: #ff652f;
   font-size: 3rem;
 }
 
 span.closing_slash {
-  color: #f13c20;
+  color: #ff652f;
   font-size: 2rem;
 }
 
 @media (prefers-color-scheme: light) {
-  .section_about {
-    border: 1px solid rgb(21, 255, 0);
+  .dima,
+  .makarov {
+    color: #feffff;
+  }
+
+  .picture_container {
+    filter: drop-shadow(0 0 0.2rem #17252a);
+  }
+
+  .picture_frame {
+    stroke: #17252a;
+  }
+
+  .picture_frame_reverse {
+    stroke: #17252a;
+  }
+
+  .summary_title {
+    color: #17252a;
+  }
+
+  a.cta-button {
+    border: 1px solid #17252a;
+  }
+
+  .download_icon path {
+    stroke: #17252a;
+  }
+
+  span.tag {
+    color: #f13c20;
+  }
+
+  span.closing_slash {
+    color: #f13c20;
+  }
+
+  p.summary_text {
+    color: black;
   }
 }
 

@@ -162,32 +162,53 @@ Web and mobile web developer</p>
         </h2>
         <div className="educ-cards_wrapper">
           <div className="educ-card studi" onClick={handleStudiClick}>
-            <h3>
-              Professional title (TP) level 5, Web and mobile web developer
-            </h3>
-            <p className="school">Studi</p>
-            <p>03/2023 - 06/2024</p>
+            <div className="educ_card_title">
+              <h3>
+                Professional title (TP) level 5, Web and mobile web developer
+              </h3>
+            </div>
+            <div className="educ_card_logo">
+              <img src="/studi.png" alt="Studi" />
+            </div>
+            <div className="educ_card_date">
+              <p>03/2023 - 06/2024</p>
+            </div>
             <br />
-            <p>
-              <span className="country">France</span>
-            </p>
+            <div className="educ_card_country">
+              <p>
+                <span className="country">France</span>
+              </p>
+            </div>
           </div>
           <div className="educ-card mitro" onClick={handleMitroClick}>
-            <h3>Higher National Diploma, Film/Video and Photographic Arts</h3>
-            <p className="school">
-              Moscow Institute of Television and Radio Broadcasting "Ostankino"
-              (MITRO)
-            </p>
-            <p>09/2007 - 05/2010</p>
+            <div className="educ_card_title">
+              <h3>Higher National Diploma, Film/Video and Photographic Arts</h3>
+            </div>
+            <div className="educ_card_logo">
+              <img src="/mitro.png" alt="MITRO" />
+            </div>
+            <div className="educ_card_date">
+              <p>09/2007 - 05/2010</p>
+            </div>
             <br />
-            <span className="country">Russia</span>
+            <div className="educ_card_country">
+              <span className="country">Russia</span>
+            </div>
           </div>
           <div className="educ-card isg" onClick={handleIsgClick}>
-            <h3>Bachelor of Business Administration (BBA), Marketing</h3>
-            <p className="school">ISG Institut Supérieur de Gestion</p>
-            <p>01/2000 - 12/2003</p>
+            <div className="educ_card_title">
+              <h3>Bachelor of Business Administration (BBA), Marketing</h3>
+            </div>
+            <div className="educ_card_logo_isg">
+              <img src="/isg.png" alt="ISG" />
+            </div>
+            <div className="educ_card_date">
+              <p>05/2000 - 06/2003</p>
+            </div>
             <br />
-            <span className="country">France</span>
+            <div className="educ_card_country">
+              <span className="country">France</span>
+            </div>
           </div>
         </div>
       </div>

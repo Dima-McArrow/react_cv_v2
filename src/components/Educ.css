@@ -28,10 +28,9 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  will-change: transform;
   transition: all 0.5s;
-  background-color: var(
-    --card_bg-color
-  ); /* Background that aligns with theme */
+  background-color: #1f2833;
   color: #8b8b8b; /* Text color for readability */
   box-shadow: var(--shadow-color); /* Adds subtle depth */
   cursor: pointer;
@@ -43,9 +42,62 @@
 }
 
 .educ-card h3 {
-  color: #8b8b8b;
+  color: #45a29e;
   margin-bottom: 2rem;
   padding: 0.3rem;
+}
+
+.educ_card_title,
+.educ_card_logo,
+.educ_card_logo_isg,
+.educ_card_date,
+.educ_card_country {
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: self-end;
+}
+
+.educ_card_card_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.educ_card_card_logo {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.educ_card_logo_isg {
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.educ_card_logo img {
+  width: 90%;
+  border-radius: 5px;
+}
+
+.educ_card_logo_isg img {
+  width: 30%;
+}
+
+.educ_card_date {
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.educ_card_country {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .country {
@@ -54,11 +106,6 @@
 
 .educ-card:hover {
   transform: scale(1.05);
-}
-
-.school {
-  font-size: 1.2rem;
-  color: var(--primary-color);
 }
 
 .active-studi {
@@ -86,12 +133,12 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: var(--body_bg-color);
+  background-color: #1f2833;
   border-radius: 8px;
   padding: 1.5rem;
   max-width: 90%;
   width: 800px;
-  height: 600px;
+  height: 670px;
   z-index: 1001; /* Sits above the backdrop */
   cursor: unset;
 }
@@ -99,7 +146,7 @@
 .studi-modal hr,
 .mitro-modal hr,
 .isg-modal hr {
-  border: 1px solid var(--primary-color);
+  border: 1px solid #0b0c10;
   width: 100%;
 }
 
@@ -124,13 +171,13 @@
 .isg-modal_content {
   text-align: center;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
-  height: 100%;
+  height: 650px;
   padding: 3rem;
   cursor: initial;
   user-select: none;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 .studi-modal_title,
@@ -138,7 +185,7 @@
 .isg-modal_title {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: var(--primary-color);
+  color: #45a29e;
 }
 
 .studi-modal_description,
@@ -146,28 +193,40 @@
 .isg-modal_description {
   font-size: 1rem;
   margin-bottom: 1.5rem;
+  color: #c5c6c7;
 }
 
 .studi-modal_close,
 .mitro-modal_close,
 .isg-modal_close {
-  color: var(--quaternary-color); /* High contrast text color */
-  background-color: var(
-    --primary-color
-  ); /* Primary color for button background */
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  cursor: pointer;
+  border-radius: 7px;
   width: 20%;
-  margin: 0 auto;
+  margin: 3rem auto 2rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  border: 1px solid #45a29e;
+  color: #45a29e;
+  padding: 1rem;
+  -webkit-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+button.studi-modal_close:focus,
+button.mitro-modal_close:focus,
+button.isg-modal_close:focus {
+  outline: none;
+  border: 1px solid #66fcf1;
+  transform: scale(0.95);
 }
 
 .studi-modal_close:hover,
 .mitro-modal_close:hover,
 .isg-modal_close:hover {
-  background-color: var(--focus-color); /* Highlighted focus color on hover */
-  color: var(--body_bg-color);
+  filter: drop-shadow(0 0 0.5em #45a29e);
 }
 
 ul.studi-modal_list,

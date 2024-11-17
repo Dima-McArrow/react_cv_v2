@@ -38,7 +38,7 @@ export const About = () => {
             <TypewriterComponent />
             <div className="download_cv">
               <a
-                href="./public/DimitriMakarovResume.pdf"
+                href="/DimitriMakarovResume.pdf"
                 className="cta-button"
                 download
               >
