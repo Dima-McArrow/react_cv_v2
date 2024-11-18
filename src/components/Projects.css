@@ -119,10 +119,20 @@ h2.card-title {
     margin: -181px auto 5rem auto;
   }
   .card {
-    min-height: 40rem;
+    min-height: 37rem;
+    justify-content: space-between;
   }
 
   .card:hover {
     transform: none;
+  }
+
+  .card-content {
+    padding: 20px;
+    height: 34%;
+  }
+
+  .card_title_wrapper {
+    height: 2rem;
   }
 }
