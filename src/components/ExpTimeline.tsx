@@ -20,10 +20,10 @@ export const ExpTimeline = () => {
               </div>
             </div>
             <h3>Web Developer</h3>
-            <h5>GitHub projects</h5>
+            <h5>Personal projects</h5>
             <p>Courbevoie, France</p>
             <p>
-              Worked on creating interactive, user-friendly web applications.
+              Working on creating interactive, user-friendly web applications.
             </p>
           </div>
         </div>
@@ -43,15 +43,13 @@ export const ExpTimeline = () => {
             <h5>Executive Hotel</h5>
             <p>Gennevillers, France</p>
             <p>
-              Assurer l'accueil avec élégance et professionnalisme dans un
-              établissement de 82 chambres et suites, gestion de l'accueil, de
-              l'enregistrement, de la remise des clés et des demandes de
-              réservation, gestion des départs, encaissement des paiements pour
-              les chambres, les repas et les boissons, standard téléphonique,
-              conseiller les clients en ce qui concerne les restaurants, les
-              musées et les sorties, être à la disposition des clients et leur
-              offrir un accueil et des prestations haut de gamme, taches
-              administratives.
+              Provision of elegant and professional service in an establishment
+              with 82 rooms and suites. Manage check-ins, key handovers, and
+              reservations. Oversee check-outs, process payments for rooms,
+              meals, and drinks, and handle telephone inquiries. Advise clients
+              on restaurants, museums, and activities. Deliver personalized,
+              high-end hospitality while completing various administrative
+              tasks.
             </p>
           </div>
         </div>
@@ -125,8 +123,17 @@ export const ExpTimeline = () => {
             <h5>Studio GRAD</h5>
             <p>Moscow, Russia</p>
             <p>
-              Gestion de projets de l'Infographie 3D (CGI) dans le cadre de
-              production des publicités télévisées et des films documentaires
+              Project management in 3D graphics (CGI) for TV commercials and
+              documentary production. Supervision of post-production:
+              management, coordination, and scheduling. Client interaction to
+              ensure project delivery aligns with specific requirements,
+              addressing feedback, and integrating it into production. Task
+              definition for studio supervisors and staff. Coordination between
+              production stakeholders (studio employees, supervisors, directors,
+              advertising agencies, etc.). Preparation of documents like
+              storyboards, schedules, lists, and presentations. Organization of
+              presentations, maintenance of necessary conditions for production
+              processes, and outreach to international clients.
             </p>
           </div>
         </div>
@@ -145,7 +152,18 @@ export const ExpTimeline = () => {
             <h3>Producer Assistant</h3>
             <h5>Ball-Park Production House</h5>
             <p>Moscow, Russia</p>
-            <p>Organisation complète des tournages</p>
+            <p>
+              Complete management of shoots: logistics, scheduling, contracts,
+              and post-production. Preparation for shoots, administration, and
+              oversight of post-production processes. Planning and coordination
+              of travel, itineraries, accommodations, and meetings for the team.
+              Creation of documents and progress reports for producers, as well
+              as cost research for production estimates and tenders.
+              Coordination of production elements (directors, casting, wardrobe,
+              props, staff, etc.) across pre-production, production, and
+              post-production. Preparation of presentations and organization of
+              resources needed for editing or sound design sessions.
+            </p>
           </div>
         </div>
         <div className="timeline-item">
@@ -160,10 +178,17 @@ export const ExpTimeline = () => {
                 <span>06 / 2012</span>
               </div>
             </div>
-            <h3>Premier assistant réalisateur</h3>
+            <h3>First Assistant Director</h3>
             <h5>Studio "Galacon"</h5>
             <p>Moscow, Russia</p>
-            <p>***</p>
+            <p>
+              Production of documentary films for the Russian federal TV's
+              "Channel One" and advertising videos. Experience in filming,
+              setting up video, lighting, and sound equipment, operating
+              cameras, and working with archives and story subjects. Skilled in
+              video editing (Final Cut, Avid), director assistance, and
+              administrative tasks.
+            </p>
           </div>
         </div>
         <div className="timeline-item">
@@ -179,9 +204,17 @@ export const ExpTimeline = () => {
               </div>
             </div>
             <h3>Marketing Manager</h3>
-            <h5>Dental Expo</h5>
+            <h5>Geodis RUS</h5>
             <p>Moscow, Russia</p>
-            <p>***</p>
+            <p>
+              Development and management of marketing and advertising (ads,
+              articles, and press releases for specialized media, printed
+              materials, participation in international exhibitions with a
+              stand, presentations, direct contact with representatives of
+              various companies). Prospecting for new clients (email, cold
+              calling, presentations, participation in major international
+              exhibitions).
+            </p>
           </div>
         </div>
       </div>

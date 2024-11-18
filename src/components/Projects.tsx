@@ -161,8 +161,10 @@ export const Projects = () => {
                 <h2 className="card-title">Sandrine Coupart</h2>
               </div>
               <p className="card-description">
-                A tool to generate secure passwords with various options for
-                length and complexity.
+                A website for Sandrine Coupart, a fictional dietitian, featuring
+                healthy recipes, user comments, evaluations, and a contact form.
+                It’s designed to promote wellness through an engaging and
+                functional user experience.
               </p>
             </div>
             <div className="card-buttons">

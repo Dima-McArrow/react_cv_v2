@@ -10,11 +10,12 @@
 }
 
 .card-container {
+  row-gap: 3rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
   user-select: none;
+  column-gap: 1.3rem;
 }
 
 .card {
@@ -33,7 +34,7 @@
 }
 
 .card:hover {
-  transform: scale(1.02);
+  transform: translateY(-10px);
 }
 
 .card-image_wrapper {
