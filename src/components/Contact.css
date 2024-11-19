@@ -142,7 +142,9 @@ button.contact_button:focus {
 }
 
 button.contact_button:hover {
-  filter: drop-shadow(0 0 0.5em #45a29e);
+  filter: drop-shadow(0 0 0.5em #66fcf1);
+  color: #66fcf1;
+  border-color: #66fcf1;
 }
 
 .massage-mandatory-fields {
@@ -204,6 +206,13 @@ button.contact_button:hover {
     color: #ffcf56;
     filter: drop-shadow(0 0 0.7em #ffcf56);
   }
+
+  .name-input_wrapper input::placeholder,
+  .email-input_wrapper input::placeholder,
+  .message-input_wrapper textarea::placeholder {
+    color: #edead0;
+  }
+}
 }
 
 @media screen and (max-width: 768px) {

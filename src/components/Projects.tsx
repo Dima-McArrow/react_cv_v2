@@ -141,7 +141,10 @@ export const Projects = () => {
                 alt="Website"
                 src="https://img.shields.io/website?url=https%3A%2F%2Fmakarovspaceindustries.com"
               ></img>
-              <a href="#code" className="card-button_code">
+              <a
+                href="https://github.com/Dima-McArrow/todo_react"
+                className="card-button_code"
+              >
                 Code
                 <svg
                   width="20px"
