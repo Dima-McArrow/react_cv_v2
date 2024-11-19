@@ -1,13 +1,20 @@
 import "./Contact.css";
 import { Social } from "./Social";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export const Contact = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS with custom settings
+  }, []);
+
   return (
     <section id="contact" className="section_contact">
       <h2>
         contactMe<span className="brackets">()</span>
       </h2>
-      <div className="contact-form_wrapper">
+      <div data-aos="fade-up" className="contact-form_wrapper">
         <form
           id="resume-contact_form"
           action="https://formspree.io/f/xqakqyre"

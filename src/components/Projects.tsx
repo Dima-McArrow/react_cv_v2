@@ -3,8 +3,15 @@ import nexustools from "../../src/nexus_tools.png";
 import katana from "../../src/katana.png";
 import todo from "../../src/todo.png";
 import sandrine from "../../src/sandrine.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export const Projects = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS with custom settings
+  }, []);
+
   return (
     <section id="projects" className="section_projects">
       <article>
@@ -13,7 +20,7 @@ export const Projects = () => {
         </h2>
         <p className="projects_list_p">Here are some of my projects</p>
         <div className="card-container">
-          <div className="card">
+          <div data-aos="slide-right" className="card">
             <div className="card-image_wrapper">
               <img src={nexustools} alt="Nexus Tools" />
             </div>
@@ -62,7 +69,7 @@ export const Projects = () => {
               </a>
             </div>
           </div>
-          <div className="card">
+          <div data-aos="slide-left" className="card">
             <div className="card-image_wrapper">
               <img src={katana} alt="Katana in a stone" />
             </div>
@@ -112,7 +119,7 @@ export const Projects = () => {
               </a>
             </div>
           </div>
-          <div className="card">
+          <div data-aos="slide-right" className="card">
             <div className="card-image_wrapper">
               <img src={todo} alt="ToDo" />
             </div>
@@ -155,7 +162,7 @@ export const Projects = () => {
               </a>
             </div>
           </div>
-          <div className="card">
+          <div data-aos="slide-left" className="card">
             <div className="card-image_wrapper">
               <img src={sandrine} alt="Sandrine Coupart" />
             </div>

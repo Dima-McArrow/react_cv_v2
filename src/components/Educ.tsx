@@ -1,6 +1,13 @@
 import "./Educ.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export const Educ = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS with custom settings
+  }, []);
+
   const handleStudiClick = () => {
     const studiContainer = document.querySelector(".studi");
 
@@ -160,7 +167,7 @@ Web and mobile web developer</p>
         <h2>
           education<span className="brackets">()</span>
         </h2>
-        <div className="educ-cards_wrapper">
+        <div data-aos="fade-up" className="educ-cards_wrapper">
           <div className="educ-card studi" onClick={handleStudiClick}>
             <div className="educ_card_title">
               <h3>

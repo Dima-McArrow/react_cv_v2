@@ -1,13 +1,20 @@
 import "./ExpTimeline.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export const ExpTimeline = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS with custom settings
+  }, []);
+
   return (
     <section id="experience" className="section_experience">
       <h2 className="experience_section_title">
         experience<span className="brackets">()</span>
       </h2>
       <div className="timeline">
-        <div className="timeline-item">
+        <div data-aos="fade-up" className="timeline-item">
           <div className="circle"></div>
           <div className="content">
             <div className="banner">
@@ -27,7 +34,7 @@ export const ExpTimeline = () => {
             </p>
           </div>
         </div>
-        <div className="timeline-item">
+        <div data-aos="fade-up" className="timeline-item">
           <div className="circle"></div>
           <div className="content">
             <div className="banner">
@@ -53,7 +60,7 @@ export const ExpTimeline = () => {
             </p>
           </div>
         </div>
-        <div className="timeline-item">
+        <div data-aos="fade-up" className="timeline-item">
           <div className="circle"></div>
           <div className="content">
             <div className="banner">
@@ -71,7 +78,7 @@ export const ExpTimeline = () => {
             <p>Film "Edmond"</p>
           </div>
         </div>
-        <div className="timeline-item">
+        <div data-aos="fade-up" className="timeline-item">
           <div className="circle"></div>
           <div className="content">
             <div className="banner">
@@ -89,7 +96,7 @@ export const ExpTimeline = () => {
             <p>Film "Soumission"</p>
           </div>
         </div>
-        <div className="timeline-item">
+        <div data-aos="fade-up" className="timeline-item">
           <div className="circle"></div>
           <div className="content">
             <div className="banner">
@@ -107,7 +114,7 @@ export const ExpTimeline = () => {
             <p>Film "Facteur Cheval"</p>
           </div>
         </div>
-        <div className="timeline-item">
+        <div data-aos="fade-up" className="timeline-item">
           <div className="circle"></div>
           <div className="content">
             <div className="banner">
@@ -137,7 +144,7 @@ export const ExpTimeline = () => {
             </p>
           </div>
         </div>
-        <div className="timeline-item">
+        <div data-aos="fade-up" className="timeline-item">
           <div className="circle"></div>
           <div className="content">
             <div className="banner">
@@ -166,7 +173,7 @@ export const ExpTimeline = () => {
             </p>
           </div>
         </div>
-        <div className="timeline-item">
+        <div data-aos="fade-up" className="timeline-item">
           <div className="circle"></div>
           <div className="content">
             <div className="banner">
@@ -191,7 +198,7 @@ export const ExpTimeline = () => {
             </p>
           </div>
         </div>
-        <div className="timeline-item">
+        <div data-aos="fade-up" className="timeline-item">
           <div className="circle"></div>
           <div className="content">
             <div className="banner">

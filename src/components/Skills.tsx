@@ -1,6 +1,13 @@
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./Skills.css";
 
 export const Skills = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // Initialize AOS with custom settings
+  }, []);
+
   return (
     <section id="skills" className="section_skills">
       <article>
@@ -8,7 +15,7 @@ export const Skills = () => {
           stack<span className="brackets">()</span>
         </h2>
         <div className="skills_container">
-          <div className="skillsSet">
+          <div data-aos="slide-right" className="skillsSet">
             <div className="skill">
               <p className="p_to_center">
                 <img src="https://skillicons.dev/icons?i=git" />
@@ -28,7 +35,7 @@ export const Skills = () => {
               <p>GitLab</p>
             </div>
           </div>
-          <div className="skillsSet">
+          <div data-aos="slide-left" className="skillsSet">
             <div className="skill">
               <p className="p_to_center">
                 <img src="https://skillicons.dev/icons?i=html" />
@@ -48,7 +55,7 @@ export const Skills = () => {
               <p>Sass / SCSS</p>
             </div>
           </div>
-          <div className="skillsSet">
+          <div data-aos="slide-right" className="skillsSet">
             <div className="skill">
               <p className="p_to_center">
                 <img src="https://skillicons.dev/icons?i=js" />
@@ -68,7 +75,7 @@ export const Skills = () => {
               <p>npm</p>
             </div>
           </div>
-          <div className="skillsSet">
+          <div data-aos="slide-left" className="skillsSet">
             <div className="skill">
               <p className="p_to_center">
                 <img src="https://skillicons.dev/icons?i=vite" />
@@ -88,7 +95,7 @@ export const Skills = () => {
               <p>TypeScript</p>
             </div>
           </div>
-          <div className="skillsSet">
+          <div data-aos="slide-right" className="skillsSet">
             <div className="skill">
               <p className="p_to_center">
                 <img src="https://skillicons.dev/icons?i=threejs" />
@@ -108,7 +115,7 @@ export const Skills = () => {
               <p>Express</p>
             </div>
           </div>
-          <div className="skillsSet">
+          <div data-aos="slide-left" className="skillsSet">
             <div className="skill">
               <p className="p_to_center">
                 <img src="https://skillicons.dev/icons?i=php" />
@@ -128,7 +135,7 @@ export const Skills = () => {
               <p>SQLite</p>
             </div>
           </div>
-          <div className="skillsSet">
+          <div data-aos="slide-up" className="skillsSet">
             <div className="skill">
               <p className="p_to_center">
                 <img src="https://skillicons.dev/icons?i=aws" />
