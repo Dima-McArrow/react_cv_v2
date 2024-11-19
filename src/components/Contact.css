@@ -150,6 +150,62 @@ button.contact_button:hover {
   font-size: 0.8rem;
 }
 
+@media (prefers-color-scheme: light) {
+  .section_contact h2 {
+    color: #ffcf56;
+  }
+
+  .section_contact {
+    background-color: #3ab795;
+  }
+
+  .name-input_wrapper input {
+    color: black;
+    caret-color: #edead0;
+    border-bottom: 2px solid #a0e8af;
+  }
+
+  .name-input_wrapper input:focus {
+    border-bottom: 2px solid #edead0;
+  }
+
+  .email-input_wrapper input {
+    color: black;
+    caret-color: #edead0;
+    border-bottom: 2px solid #a0e8af;
+  }
+
+  .email-input_wrapper input:focus {
+    border-bottom: 2px solid #edead0;
+  }
+
+  .message-input_wrapper textarea {
+    color: black;
+    caret-color: #edead0;
+    border: 2px solid #a0e8af;
+  }
+
+  .message-input_wrapper textarea:focus,
+  .message-input_wrapper textarea:active {
+    border: 2px solid #edead0;
+  }
+
+  .massage-mandatory-fields {
+    color: #edead0;
+  }
+
+  button.contact_button {
+    border: 1px solid #a0e8af;
+    color: #a0e8af;
+  }
+
+  button.contact_button:hover {
+    border-color: #ffcf56;
+    color: #ffcf56;
+    filter: drop-shadow(0 0 0.7em #ffcf56);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .section_contact {
     margin: 37px auto 5rem auto;

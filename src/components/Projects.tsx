@@ -8,7 +8,7 @@ export const Projects = () => {
   return (
     <section id="projects" className="section_projects">
       <article>
-        <h2>
+        <h2 className="projects_section_title">
           myProjects<span className="brackets">()</span>
         </h2>
         <p className="projects_list_p">Here are some of my projects</p>
@@ -36,11 +36,12 @@ export const Projects = () => {
               <a
                 href="https://dima-mcarrow.github.io/nexus-tools/"
                 target="_blank"
+                className="card-button_demo"
               >
                 Demo
               </a>
 
-              <a href="#code" target="_blank">
+              <a href="#code" target="_blank" className="card-button_code">
                 Code
                 <svg
                   width="20px"
@@ -85,12 +86,14 @@ export const Projects = () => {
               <a
                 href="https://dima-mcarrow.github.io/katana_in_stone/dist/index.html"
                 target="_blank"
+                className="card-button_demo"
               >
                 Demo
               </a>
               <a
                 href="https://github.com/Dima-McArrow/katana_in_stone"
                 target="_blank"
+                className="card-button_code"
               >
                 Code
                 <svg
@@ -131,7 +134,7 @@ export const Projects = () => {
                 alt="Website"
                 src="https://img.shields.io/website?url=https%3A%2F%2Fmakarovspaceindustries.com"
               ></img>
-              <a href="#code">
+              <a href="#code" className="card-button_code">
                 Code
                 <svg
                   width="20px"
@@ -173,7 +176,11 @@ export const Projects = () => {
                 alt="Website"
                 src="https://img.shields.io/website?url=https%3A%2F%2Fmakarovspaceindustries.com"
               ></img>
-              <a href="#code">
+              <a
+                href="https://github.com/Dima-McArrow/sandrine-coupart-site"
+                target="_blank"
+                className="card-button_code"
+              >
                 Code
                 <svg
                   width="20px"

@@ -195,31 +195,52 @@ span.closing_slash {
 @media (prefers-color-scheme: light) {
   .dima,
   .makarov {
-    color: #feffff;
+    color: #edead0;
   }
 
   .picture_container {
-    filter: drop-shadow(0 0 0.2rem #17252a);
+    filter: drop-shadow(0 0 0.2rem #ffcf56);
   }
 
   .picture_frame {
-    stroke: #17252a;
+    stroke: #ffcf56;
   }
 
   .picture_frame_reverse {
-    stroke: #17252a;
+    stroke: #ffcf56;
+  }
+
+  .picture {
+    filter: none;
+  }
+
+  .title_container {
+    color: #ffcf56;
   }
 
   .summary_title {
-    color: #17252a;
+    color: #ffcf56;
   }
 
   a.cta-button {
-    border: 1px solid #17252a;
+    border: 1px solid #edead0;
+    color: #edead0;
+  }
+
+  a.cta-button:hover {
+    color: #ffcf56;
+    border-color: #ffcf56;
+    filter: drop-shadow(0 0 0.5em #edead0);
+  }
+
+  a.cta-button:hover svg path {
+    color: #ffcf56;
+    border-color: #ffcf56;
+    filter: drop-shadow(0 0 0.5em #edead0);
   }
 
   .download_icon path {
-    stroke: #17252a;
+    stroke: #edead0;
   }
 
   span.tag {

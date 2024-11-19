@@ -4,7 +4,7 @@ export const Skills = () => {
   return (
     <section id="skills" className="section_skills">
       <article>
-        <h2>
+        <h2 className="h2_skills">
           stack<span className="brackets">()</span>
         </h2>
         <div className="skills_container">

@@ -240,6 +240,73 @@ ul.isg-modal_list li {
   margin: 1rem 0;
 }
 
+@media (prefers-color-scheme: light) {
+  .educ_wrapper h2 {
+    color: #ffcf56;
+  }
+
+  .educ-card {
+    background-color: #86baa1;
+    color: #edead0; /* Text color for readability */
+  }
+
+  .studi-modal,
+  .mitro-modal,
+  .isg-modal {
+    background-color: #86baa1;
+  }
+
+  .studi-modal hr,
+  .mitro-modal hr,
+  .isg-modal hr {
+    border: 1px solid #3ab795;
+  }
+
+  .educ_card_card_title {
+    color: #0b0c10;
+  }
+
+  .educ-card h3 {
+    color: #0b0c10;
+  }
+
+  .educ_card_country span {
+    color: #0b0c10;
+  }
+
+  .studi-modal_title,
+  .mitro-modal_title,
+  .isg-modal_title {
+    color: #ffcf56;
+  }
+
+  .studi-modal_description,
+  .mitro-modal_description,
+  .isg-modal_description {
+    color: #0b0c10;
+  }
+
+  .studi-modal_close,
+  .mitro-modal_close,
+  .isg-modal_close {
+    border: 1px solid #edead0;
+    color: #edead0;
+  }
+
+  button.studi-modal_close:focus,
+  button.mitro-modal_close:focus,
+  button.isg-modal_close:focus {
+    border: 1px solid #ffcf56;
+  }
+
+  .studi-modal_close:hover,
+  .mitro-modal_close:hover,
+  .isg-modal_close:hover {
+    color: #ffcf56;
+    filter: drop-shadow(0 0 0.5em #45a29e);
+  }
+}
+
 @media screen and (max-width: 768px) {
   .educ-cards_wrapper {
     display: flex;
@@ -258,7 +325,7 @@ ul.isg-modal_list li {
   .studi-modal,
   .mitro-modal,
   .isg-modal {
-    width: 337px;
+    width: 300px;
     height: 700px;
   }
 

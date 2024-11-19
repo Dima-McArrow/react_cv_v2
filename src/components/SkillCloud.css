@@ -19,6 +19,12 @@
   justify-content: center;
 }
 
+@media (prefers-color-scheme: light) {
+  .skill_cloud_title {
+    color: #ffcf56;
+  }
+}
+
 @media screen and (max-width: 768px) {
   #skill_cloud_container {
     display: flex;

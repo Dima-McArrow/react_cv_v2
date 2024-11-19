@@ -46,6 +46,18 @@
   margin: 0;
 }
 
+@media (prefers-color-scheme: light) {
+  .skill {
+    border: 1px solid #86baa1;
+    background-color: #86baa1;
+    color: #1f2833;
+  }
+
+  .h2_skills {
+    color: #ffcf56;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .skillsSet {
     flex-direction: column;

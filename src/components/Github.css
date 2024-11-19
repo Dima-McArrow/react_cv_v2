@@ -69,6 +69,40 @@
   stroke: #66fcf1;
 }
 
+@media (prefers-color-scheme: light) {
+  .github-skill_container {
+    border: 1px solid #edead0;
+  }
+
+  .github-skill_container::after {
+    background: conic-gradient(#edead0 var(--fill), transparent var(--fill));
+  }
+
+  .the_github-link {
+    background-color: #86baa1;
+  }
+
+  .github_desk {
+    border-color: #edead0;
+    color: #edead0;
+  }
+
+  .the_github-link > svg path {
+    fill: #a0e8af;
+  }
+
+  .the_github-link:hover > svg path {
+    fill: #edead0;
+    stroke: #edead0;
+    filter: drop-shadow(0 0 2em #edead0);
+  }
+
+  .github-skill_container:hover::after {
+    --fill: 100%;
+    background: conic-gradient(#edead0 var(--fill), transparent var(--fill));
+  }
+}
+
 @media screen and (max-width: 768px) {
   .github_desk {
     display: none;

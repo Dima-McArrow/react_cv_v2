@@ -5,3 +5,14 @@
   padding: 1rem 2rem;
   width: 50%;
 }
+
+@media (prefers-color-scheme: light) {
+  #desktop_nav a {
+    color: #0b0c10;
+  }
+
+  #desktop_nav a:hover {
+    color: #edead0;
+    filter: drop-shadow(0 0 0.5em #edead0);
+  }
+}

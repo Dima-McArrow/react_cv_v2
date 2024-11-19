@@ -48,6 +48,16 @@ svg.logo path {
   }
 }
 
+@media (prefers-color-scheme: light) {
+  svg.logo path {
+    stroke: #1f2833;
+  }
+
+  .header_container-mobile a {
+    filter: drop-shadow(0 0 0.5em #edead0);
+  }
+}
+
 @media (max-width: 768px) {
   .header_container-desktop {
     display: none;

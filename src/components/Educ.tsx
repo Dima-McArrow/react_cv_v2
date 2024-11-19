@@ -123,7 +123,7 @@ Web and mobile web developer</p>
           <div class="isg-modal_image">
             <img src="/isg.png" alt="ISG Institut Supérieur de Gestion" />
           </div>
-          <h2 class="mitro-modal_title">SG Institut Supérieur de Gestion</h2>
+          <h2 class="mitro-modal_title">ISG Institut Supérieur de Gestion</h2>
           <hr />
           <p class="mitro-modal_description">Bachelor of Business Administration
 (BBA), Marketing</p>

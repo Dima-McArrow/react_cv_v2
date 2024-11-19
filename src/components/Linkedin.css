@@ -69,6 +69,40 @@
   stroke: #66fcf1;
 }
 
+@media (prefers-color-scheme: light) {
+  .the_link-container {
+    border: 1px solid #edead0;
+  }
+
+  .the_link-container::after {
+    background: conic-gradient(#edead0 var(--fill), transparent var(--fill));
+  }
+
+  .the_link {
+    background-color: #86baa1;
+  }
+
+  .linkedin_desk {
+    border-color: #edead0;
+    color: #edead0;
+  }
+
+  .the_link > svg path {
+    fill: #a0e8af;
+  }
+
+  .the_link:hover > svg path {
+    fill: #edead0;
+    stroke: #edead0;
+    filter: drop-shadow(0 0 2em #edead0);
+  }
+
+  .the_link-container:hover::after {
+    --fill: 100%;
+    background: conic-gradient(#edead0 var(--fill), transparent var(--fill));
+  }
+}
+
 @media screen and (max-width: 768px) {
   .linkedin_desk {
     display: none;

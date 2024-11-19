@@ -232,17 +232,46 @@
 }
 
 @media (prefers-color-scheme: light) {
+  .experience_section_title {
+    color: #ffcf56;
+  }
+
+  .date {
+    color: #edead0;
+    background-color: #86baa1; /* Unified color for start and end */
+  }
+
   .timeline::before {
-    background-color: #17252a; /* Line color */
+    background-color: #a0e8af; /* Line color */
   }
 
   .circle {
-    border: 2px solid #17252a;
-    background-color: #3aafa9;
+    border: 2px solid #a0e8af;
+    background-color: #3ab795;
+  }
+
+  .connector::before {
+    border-left: 40px solid #86baa1; /* Connector color */
   }
 
   .connector::after {
-    border-left: 40px solid #3aafa9;
-    background-color: #1f2833;
+    border-left: 40px solid #3ab795;
+    background-color: #86baa1;
+  }
+
+  .timeline-item .content h3 {
+    color: #ffcf56;
+  }
+
+  .timeline-item .content h5 {
+    color: #0b0c10;
+  }
+
+  .timeline-item .content p {
+    color: #1f2833;
+  }
+
+  .timeline-item .content p.exp_country {
+    color: #a0e8af;
   }
 }

@@ -21,7 +21,7 @@
 .card {
   align-items: center;
   background: #1f2833;
-  border-radius: 12px;
+  border-radius: 5px;
   overflow: hidden;
   max-width: 445px;
   will-change: transform;
@@ -83,11 +83,11 @@
   gap: 0.5rem;
 }
 
-.card-buttons:hover svg path {
+.card-button_code:hover svg path {
   fill: #66fcf1;
 }
 
-.card-buttons svg path {
+.card-button_code svg path {
   fill: #45a29e;
 }
 
@@ -113,6 +113,44 @@ img.card-badge {
 h2.card-title {
   line-height: 1;
   height: 3rem;
+}
+
+@media (prefers-color-scheme: light) {
+  .projects_section_title {
+    color: #ffcf56;
+  }
+
+  .card {
+    background: #86baa1;
+  }
+
+  .card-title {
+    color: #0b0c10;
+  }
+
+  .card-description {
+    color: #1f2833;
+  }
+
+  .card-buttons a {
+    color: #edead0;
+  }
+
+  .card-buttons a:hover {
+    color: #ffcf56;
+  }
+
+  .card-buttons svg path {
+    fill: #edead0;
+  }
+
+  .card-buttons a:hover svg path {
+    fill: #ffcf56;
+  }
+
+  .projects_list_p {
+    color: #edead0;
+  }
 }
 
 @media screen and (max-width: 768px) {

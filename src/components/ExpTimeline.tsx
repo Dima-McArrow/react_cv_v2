@@ -3,7 +3,7 @@ import "./ExpTimeline.css";
 export const ExpTimeline = () => {
   return (
     <section id="experience" className="section_experience">
-      <h2>
+      <h2 className="experience_section_title">
         experience<span className="brackets">()</span>
       </h2>
       <div className="timeline">
@@ -21,7 +21,7 @@ export const ExpTimeline = () => {
             </div>
             <h3>Web Developer</h3>
             <h5>Personal projects</h5>
-            <p>Courbevoie, France</p>
+            <p className="exp_country">Courbevoie, France</p>
             <p>
               Working on creating interactive, user-friendly web applications.
             </p>
@@ -41,7 +41,7 @@ export const ExpTimeline = () => {
             </div>
             <h3>Hotel receptionist</h3>
             <h5>Executive Hotel</h5>
-            <p>Gennevillers, France</p>
+            <p className="exp_country">Gennevillers, France</p>
             <p>
               Provision of elegant and professional service in an establishment
               with 82 rooms and suites. Manage check-ins, key handovers, and
@@ -66,7 +66,7 @@ export const ExpTimeline = () => {
               </div>
             </div>
             <h3>Assistant production</h3>
-            <p>Paris, France</p>
+            <p className="exp_country">Paris, France</p>
             <h5>Ezra Productions</h5>
             <p>Film "Edmond"</p>
           </div>
@@ -84,7 +84,7 @@ export const ExpTimeline = () => {
               </div>
             </div>
             <h3>Assistant production</h3>
-            <p>Paris, France</p>
+            <p className="exp_country">Paris, France</p>
             <h5>Eaux Vives Productions</h5>
             <p>Film "Soumission"</p>
           </div>
@@ -103,7 +103,7 @@ export const ExpTimeline = () => {
             </div>
             <h3>Assistant production</h3>
             <h5>Fechner Films</h5>
-            <p>Paris, France</p>
+            <p className="exp_country">Paris, France</p>
             <p>Film "Facteur Cheval"</p>
           </div>
         </div>
@@ -121,7 +121,7 @@ export const ExpTimeline = () => {
             </div>
             <h3>Executive Producer</h3>
             <h5>Studio GRAD</h5>
-            <p>Moscow, Russia</p>
+            <p className="exp_country">Moscow, Russia</p>
             <p>
               Project management in 3D graphics (CGI) for TV commercials and
               documentary production. Supervision of post-production:
@@ -151,7 +151,7 @@ export const ExpTimeline = () => {
             </div>
             <h3>Producer Assistant</h3>
             <h5>Ball-Park Production House</h5>
-            <p>Moscow, Russia</p>
+            <p className="exp_country">Moscow, Russia</p>
             <p>
               Complete management of shoots: logistics, scheduling, contracts,
               and post-production. Preparation for shoots, administration, and
@@ -180,7 +180,7 @@ export const ExpTimeline = () => {
             </div>
             <h3>First Assistant Director</h3>
             <h5>Studio "Galacon"</h5>
-            <p>Moscow, Russia</p>
+            <p className="exp_country">Moscow, Russia</p>
             <p>
               Production of documentary films for the Russian federal TV's
               "Channel One" and advertising videos. Experience in filming,
@@ -205,7 +205,7 @@ export const ExpTimeline = () => {
             </div>
             <h3>Marketing Manager</h3>
             <h5>Geodis RUS</h5>
-            <p>Moscow, Russia</p>
+            <p className="exp_country">Moscow, Russia</p>
             <p>
               Development and management of marketing and advertising (ads,
               articles, and press releases for specialized media, printed

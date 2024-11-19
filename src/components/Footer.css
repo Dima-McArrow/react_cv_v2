@@ -1,6 +1,6 @@
 .footer {
   background-color: transparent;
-  color: #45a29e;
+  color: #66fcf1;
   text-align: center;
   left: 0;
   bottom: 0;
@@ -9,4 +9,10 @@
   font-style: normal;
   padding-bottom: 3rem;
   user-select: none;
+}
+
+@media (prefers-color-scheme: light) {
+  .footer {
+    color: #0b0c10;
+  }
 }

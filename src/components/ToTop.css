@@ -72,6 +72,24 @@
   align-items: center;
 }
 
+@media (prefers-color-scheme: light) {
+  .to-top-button svg path {
+    fill: #a0e8af;
+  }
+
+  .to-top-button:hover {
+    filter: drop-shadow(0 0 0.5em #ffcf56);
+  }
+
+  .to-top-button:hover svg path {
+    fill: #ffcf56;
+  }
+
+  .button_to-top_description {
+    color: #edead0;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .to-top-button {
     display: none;
