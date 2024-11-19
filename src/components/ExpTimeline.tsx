@@ -27,8 +27,8 @@ export const ExpTimeline = () => {
               </div>
             </div>
             <h3>Web Developer</h3>
-            <h5>Personal projects</h5>
             <p className="exp_country">Courbevoie, France</p>
+            <h5>Personal projects</h5>
             <p>
               Working on creating interactive, user-friendly web applications.
             </p>
@@ -47,8 +47,8 @@ export const ExpTimeline = () => {
               </div>
             </div>
             <h3>Hotel receptionist</h3>
-            <h5>Executive Hotel</h5>
             <p className="exp_country">Gennevillers, France</p>
+            <h5>Executive Hotel</h5>
             <p>
               Provision of elegant and professional service in an establishment
               with 82 rooms and suites. Manage check-ins, key handovers, and
@@ -109,8 +109,8 @@ export const ExpTimeline = () => {
               </div>
             </div>
             <h3>Assistant production</h3>
-            <h5>Fechner Films</h5>
             <p className="exp_country">Paris, France</p>
+            <h5>Fechner Films</h5>
             <p>Film "Facteur Cheval"</p>
           </div>
         </div>
@@ -127,8 +127,8 @@ export const ExpTimeline = () => {
               </div>
             </div>
             <h3>Executive Producer</h3>
-            <h5>Studio GRAD</h5>
             <p className="exp_country">Moscow, Russia</p>
+            <h5>Studio GRAD</h5>
             <p>
               Project management in 3D graphics (CGI) for TV commercials and
               documentary production. Supervision of post-production:
@@ -157,8 +157,8 @@ export const ExpTimeline = () => {
               </div>
             </div>
             <h3>Producer Assistant</h3>
-            <h5>Ball-Park Production House</h5>
             <p className="exp_country">Moscow, Russia</p>
+            <h5>Ball-Park Production House</h5>
             <p>
               Complete management of shoots: logistics, scheduling, contracts,
               and post-production. Preparation for shoots, administration, and
@@ -186,8 +186,8 @@ export const ExpTimeline = () => {
               </div>
             </div>
             <h3>First Assistant Director</h3>
-            <h5>Studio "Galacon"</h5>
             <p className="exp_country">Moscow, Russia</p>
+            <h5>Studio "Galacon"</h5>
             <p>
               Production of documentary films for the Russian federal TV's
               "Channel One" and advertising videos. Experience in filming,
@@ -211,8 +211,8 @@ export const ExpTimeline = () => {
               </div>
             </div>
             <h3>Marketing Manager</h3>
-            <h5>Geodis RUS</h5>
             <p className="exp_country">Moscow, Russia</p>
+            <h5>Geodis RUS</h5>
             <p>
               Development and management of marketing and advertising (ads,
               articles, and press releases for specialized media, printed
