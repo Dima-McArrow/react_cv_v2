@@ -18,19 +18,19 @@ export const Skills = () => {
           <div data-aos="slide-right" className="skillsSet">
             <div className="skill">
               <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=git" />
+                <img src="https://skillicons.dev/icons?i=git" alt="Git" />
               </p>
               <p>Git</p>
             </div>
             <div className="skill">
               <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=github" />
+                <img src="https://skillicons.dev/icons?i=github" alt="GitHub" />
               </p>
               <p>GitHub</p>
             </div>
             <div className="skill">
               <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=gitlab" />
+                <img src="https://skillicons.dev/icons?i=gitlab" alt="GitLab" />
               </p>
               <p>GitLab</p>
             </div>
@@ -38,19 +38,19 @@ export const Skills = () => {
           <div data-aos="slide-left" className="skillsSet">
             <div className="skill">
               <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=html" />
+                <img src="https://skillicons.dev/icons?i=html" alt="HTML" />
               </p>
               <p>HTML5</p>
             </div>
             <div className="skill">
               <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=css" />
+                <img src="https://skillicons.dev/icons?i=css" alt="CSS" />
               </p>
               <p>CSS3</p>
             </div>
             <div className="skill">
               <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=sass" />
+                <img src="https://skillicons.dev/icons?i=sass" alt="Sass" />
               </p>
               <p>Sass / SCSS</p>
             </div>
@@ -58,19 +58,19 @@ export const Skills = () => {
           <div data-aos="slide-right" className="skillsSet">
             <div className="skill">
               <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=js" />
+                <img src="https://skillicons.dev/icons?i=js" alt="JS" />
               </p>
               <p>JavaScript</p>
             </div>
             <div className="skill">
               <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=nodejs" />
+                <img src="https://skillicons.dev/icons?i=nodejs" alt="Node" />
               </p>
               <p>Node</p>
             </div>
             <div className="skill">
               <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=npm" />
+                <img src="https://skillicons.dev/icons?i=npm" alt="npm" />
               </p>
               <p>npm</p>
             </div>
@@ -78,19 +78,19 @@ export const Skills = () => {
           <div data-aos="slide-left" className="skillsSet">
             <div className="skill">
               <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=vite" />
+                <img src="https://skillicons.dev/icons?i=vite" alt="Vite" />
               </p>
               <p>Vite</p>
             </div>
             <div className="skill">
               <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=react" />
+                <img src="https://skillicons.dev/icons?i=react" alt="React" />
               </p>
               <p>React</p>
             </div>
             <div className="skill">
               <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=typescript" />
+                <img src="https://skillicons.dev/icons?i=typescript" alt="TS" />
               </p>
               <p>TypeScript</p>
             </div>
@@ -98,19 +98,25 @@ export const Skills = () => {
           <div data-aos="slide-right" className="skillsSet">
             <div className="skill">
               <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=threejs" />
+                <img
+                  src="https://skillicons.dev/icons?i=threejs"
+                  alt="Three.js"
+                />
               </p>
               <p>Three.js</p>
             </div>
             <div className="skill">
               <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=svg" />
+                <img src="https://skillicons.dev/icons?i=svg" alt="SVG" />
               </p>
               <p>SVG</p>
             </div>
             <div className="skill">
               <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=express" />
+                <img
+                  src="https://skillicons.dev/icons?i=express"
+                  alt="Express"
+                />
               </p>
               <p>Express</p>
             </div>
@@ -118,19 +124,19 @@ export const Skills = () => {
           <div data-aos="slide-left" className="skillsSet">
             <div className="skill">
               <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=php" />
+                <img src="https://skillicons.dev/icons?i=php" alt="PHP" />
               </p>
               <p>PHP</p>
             </div>
             <div className="skill">
               <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=mysql" />
+                <img src="https://skillicons.dev/icons?i=mysql" alt="MySQL" />
               </p>
               <p>MySQL</p>
             </div>
             <div className="skill">
               <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=sqlite" />
+                <img src="https://skillicons.dev/icons?i=sqlite" alt="SQLite" />
               </p>
               <p>SQLite</p>
             </div>
@@ -138,19 +144,19 @@ export const Skills = () => {
           <div data-aos="slide-up" className="skillsSet">
             <div className="skill">
               <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=aws" />
+                <img src="https://skillicons.dev/icons?i=aws" alt="AWS" />
               </p>
               <p>AWS</p>
             </div>
             <div className="skill">
               <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=gcp" />
+                <img src="https://skillicons.dev/icons?i=gcp" alt="GCP" />
               </p>
               <p>Google Cloud</p>
             </div>
             <div className="skill">
               <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=heroku" />
+                <img src="https://skillicons.dev/icons?i=heroku" alt="Heroku" />
               </p>
               <p>Heroku</p>
             </div>
