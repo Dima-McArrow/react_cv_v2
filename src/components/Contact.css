@@ -225,6 +225,12 @@ button.contact_button:hover {
 
   .name-input_wrapper input {
     width: 100%;
+    border-radius: 0;
+  }
+
+  .email-input_wrapper input {
+    width: 100%;
+    border-radius: 0;
   }
 
   form {
