@@ -154,6 +154,18 @@ button.download_cv {
   gap: 0.5rem;
 }
 
+button.download_cv:focus {
+  outline: none;
+  border: 1px solid #66fcf1;
+  transform: scale(0.95);
+}
+
+button.download_cv:hover {
+  filter: drop-shadow(0 0 0.5em #66fcf1);
+  color: #66fcf1;
+  border-color: #66fcf1;
+}
+
 a.cta-button {
   border-radius: 7px;
   display: flex;
