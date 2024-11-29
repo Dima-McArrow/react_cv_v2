@@ -39,6 +39,7 @@
 
 .card-image_wrapper {
   height: 50%;
+  width: 100%;
 }
 
 .card img {
@@ -113,6 +114,15 @@ img.card-badge {
 h2.card-title {
   line-height: 1;
   height: 3rem;
+}
+
+.parrot-image {
+  width: 100%;
+  height: 250px;
+  background-image: url(../parrot.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 @media (prefers-color-scheme: light) {
