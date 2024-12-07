@@ -45,6 +45,7 @@
   transition: opacity 0.3s;
   color: #8b8b8b;
   cursor: initial;
+  -webkit-user-select: none;
   user-select: none;
   pointer-events: none;
 }
