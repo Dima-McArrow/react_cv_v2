@@ -28,7 +28,7 @@ export const ExpTimeline = () => {
             </div>
             <h3>Web Developer</h3>
             <p className="exp_country">Courbevoie, France</p>
-            <h5>Personal projects</h5>
+            <h5>Freelance</h5>
             <p>
               Working on creating interactive, user-friendly web applications.
             </p>
