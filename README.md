@@ -2,6 +2,8 @@
 
 A modern, interactive CV/Resume built with React, TypeScript, and Three.js. This project showcases my professional experience, education, and skills in an engaging way.
 
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE.txt)
+
 ## 🚀 Features
 
 - Interactive 3D elements using Three.js
