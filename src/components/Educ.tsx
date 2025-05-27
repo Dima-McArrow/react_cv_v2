@@ -2,6 +2,9 @@ import "./Educ.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import studi from "../../src/studi.png";
+import mitro from "../../src/mitro.png";
+import isg from "../../src/isg.png";
 
 export const Educ = () => {
   useEffect(() => {
@@ -175,7 +178,7 @@ Web and mobile web developer</p>
               </h3>
             </div>
             <div className="educ_card_logo">
-              <img src="/studi.png" alt="Studi" />
+              <img src={studi} alt="Studi" />
             </div>
             <div className="educ_card_date">
               <p>03/2023 - 06/2024</p>
@@ -192,7 +195,7 @@ Web and mobile web developer</p>
               <h3>Higher National Diploma, Film/Video and Photographic Arts</h3>
             </div>
             <div className="educ_card_logo">
-              <img src="/mitro.png" alt="MITRO" />
+              <img src={mitro} alt="MITRO" />
             </div>
             <div className="educ_card_date">
               <p>09/2007 - 05/2010</p>
@@ -207,7 +210,7 @@ Web and mobile web developer</p>
               <h3>Bachelor of Business Administration (BBA), Marketing</h3>
             </div>
             <div className="educ_card_logo_isg">
-              <img src="/isg.png" alt="ISG" />
+              <img src={isg} alt="ISG" />
             </div>
             <div className="educ_card_date">
               <p>05/2000 - 06/2003</p>
