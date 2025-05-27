@@ -1,5 +1,7 @@
 # React CV v2
 
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE.txt)
+
 A modern, interactive CV/Resume built with React, TypeScript, and Three.js. This project showcases my professional experience, education, and skills in an engaging way.
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
