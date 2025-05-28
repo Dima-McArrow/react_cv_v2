@@ -64,25 +64,39 @@ export function initSkillCloudAnimation() {
 
   // Load an example texture for icons
   const loader = new THREE.TextureLoader();
-  const minDistance = 2; // Minimum distance between icons
+  const minDistance = 1.8; // Slightly reduced minimum distance between icons
 
   function loadIcon(url: string) {
     loader.load(
       url,
       (texture) => {
-        console.log("Texture loaded");
+        console.log(`Attempting to place icon: ${url}`);
         let position;
+        let attempts = 0;
+        const MAX_ATTEMPTS = 50;
+
         do {
-          const phi = Math.acos(1 - 2 * Math.random()); // Random latitude
-          const theta = 2 * Math.PI * Math.random(); // Random longitude
-          const x = 7 * Math.sin(phi) * Math.cos(theta);
-          const y = 5 * Math.sin(phi) * Math.sin(theta);
-          const z = 5 * Math.cos(phi);
+          const phi = Math.acos(1 - 2 * Math.random());
+          const theta = 2 * Math.PI * Math.random();
+          const x = 8 * Math.sin(phi) * Math.cos(theta); // Increased from 7 to 8
+          const y = 6 * Math.sin(phi) * Math.sin(theta); // Increased from 5 to 6
+          const z = 6 * Math.cos(phi); // Increased from 5 to 6
           position = new THREE.Vector3(x, y, z);
-        } while (isTooClose(position, minDistance));
+          attempts++;
+        } while (isTooClose(position, minDistance) && attempts < MAX_ATTEMPTS);
+
+        if (attempts >= MAX_ATTEMPTS) {
+          console.warn(
+            `Could not place icon ${url} after ${MAX_ATTEMPTS} attempts - skipping`
+          );
+          return;
+        }
 
         const icon = createIcon(texture, position);
         iconGroup.add(icon);
+        console.log(
+          `Successfully placed icon: ${url} after ${attempts} attempts`
+        );
       },
       undefined,
       (err) => {
@@ -137,6 +151,10 @@ export function initSkillCloudAnimation() {
     "svg/neovim.svg",
     "svg/python.svg",
     "svg/svg.svg",
+    "svg/mongodb.svg",
+    "svg/moleculer.svg",
+    "svg/astro.svg",
+    "svg/alpinejs.svg",
   ];
 
   icons.forEach(loadIcon);

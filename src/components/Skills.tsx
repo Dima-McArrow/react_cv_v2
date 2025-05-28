@@ -137,9 +137,12 @@ export const Skills = () => {
             </div>
             <div className="skill">
               <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=sqlite" alt="SQLite" />
+                <img
+                  src="https://skillicons.dev/icons?i=mongodb"
+                  alt="MongoDB"
+                />
               </p>
-              <p>SQLite</p>
+              <p>MongoDB</p>
             </div>
           </div>
           <div data-aos="slide-right" className="skillsSet">
