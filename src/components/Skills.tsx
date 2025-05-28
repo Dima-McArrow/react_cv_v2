@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Skills.css";
+import moleculer from "../moleculer.png";
 
 export const Skills = () => {
   useEffect(() => {
@@ -141,7 +142,7 @@ export const Skills = () => {
               <p>SQLite</p>
             </div>
           </div>
-          <div data-aos="slide-up" className="skillsSet">
+          <div data-aos="slide-right" className="skillsSet">
             <div className="skill">
               <p className="p_to_center">
                 <img src="https://skillicons.dev/icons?i=aws" alt="AWS" />
@@ -159,6 +160,52 @@ export const Skills = () => {
                 <img src="https://skillicons.dev/icons?i=heroku" alt="Heroku" />
               </p>
               <p>Heroku</p>
+            </div>
+          </div>
+          <div data-aos="slide-left" className="skillsSet">
+            <div className="skill">
+              <p className="p_to_center">
+                <img src="https://skillicons.dev/icons?i=astro" alt="Astro" />
+              </p>
+              <p>Astro</p>
+            </div>
+            <div className="skill">
+              <p className="p_to_center">
+                <img
+                  src="https://skillicons.dev/icons?i=tailwind"
+                  alt="Tailwind"
+                />
+              </p>
+              <p>Tailwind</p>
+            </div>
+            <div className="skill">
+              <p className="p_to_center">
+                <img
+                  src="https://skillicons.dev/icons?i=alpinejs"
+                  alt="Alpine JS"
+                />
+              </p>
+              <p>Alpine JS</p>
+            </div>
+          </div>
+          <div data-aos="slide-up" className="skillsSet">
+            <div className="skill">
+              <p className="p_to_center">
+                <img src={moleculer} alt="Moleculer" width="48" height="48" />
+              </p>
+              <p>Moleculer</p>
+            </div>
+            <div className="skill">
+              <p className="p_to_center">
+                <img src="https://skillicons.dev/icons?i=docker" alt="Docker" />
+              </p>
+              <p>Docker</p>
+            </div>
+            <div className="skill">
+              <p className="p_to_center">
+                <img src="https://skillicons.dev/icons?i=prisma" alt="Prisma" />
+              </p>
+              <p>Prisma</p>
             </div>
           </div>
         </div>
