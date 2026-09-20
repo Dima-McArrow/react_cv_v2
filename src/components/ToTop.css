@@ -6,7 +6,7 @@
   opacity: 0; /* Initially invisible */
   visibility: hidden; /* Initially hidden */
   background-color: transparent;
-  color: #45a29e;
+  color: var(--accent);
   padding: 10px 15px;
   cursor: pointer;
   z-index: 1000;
@@ -21,7 +21,7 @@
 }
 
 .to-top-button svg path {
-  fill: #45a29e;
+  fill: var(--accent);
 }
 
 .to-top-button:focus {
@@ -33,13 +33,13 @@
 }
 
 .to-top-button:hover {
-  filter: drop-shadow(0 0 0.5em #45a29e);
+  filter: drop-shadow(0 0 0.5em var(--accent));
   outline: none;
   border: none;
 }
 
 .to-top-button:hover svg path {
-  fill: #66fcf1;
+  fill: var(--accent-strong);
 }
 
 .to-top-button.visible {
@@ -53,7 +53,7 @@
   bottom: 85px;
   right: 107px;
   background-color: transparent;
-  color: #45a29e;
+  color: var(--accent);
   z-index: 1000;
   transition: opacity 0.3s ease-in-out;
   outline: none;
@@ -70,24 +70,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@media (prefers-color-scheme: light) {
-  .to-top-button svg path {
-    fill: #a0e8af;
-  }
-
-  .to-top-button:hover {
-    filter: drop-shadow(0 0 0.5em #ffcf56);
-  }
-
-  .to-top-button:hover svg path {
-    fill: #ffcf56;
-  }
-
-  .button_to-top_description {
-    color: #edead0;
-  }
 }
 
 @media screen and (max-width: 768px) {

@@ -52,7 +52,7 @@ article {
   font-size: 2.5rem;
   width: 17rem;
   display: flex;
-  color: #c5c6c7;
+  color: var(--text);
 }
 
 .dima {
@@ -81,7 +81,7 @@ article {
   display: flex;
   justify-content: center;
   align-items: center;
-  filter: drop-shadow(0 0 0.2rem #45a29e); /* Shadow effect */
+  filter: drop-shadow(0 0 0.2rem var(--accent)); /* Shadow effect */
 }
 
 .border_container {
@@ -102,7 +102,7 @@ article {
   width: 100%;
   height: 100%;
   fill: none;
-  stroke: #45a29e; /* Frame color */
+  stroke: var(--accent); /* Frame color */
   stroke-width: 5;
   stroke-dasharray: 27;
   stroke-dashoffset: 97;
@@ -117,7 +117,7 @@ article {
   width: 100%;
   height: 100%;
   fill: none;
-  stroke: #45a29e; /* Frame color */
+  stroke: var(--accent); /* Frame color */
   stroke-width: 5;
   stroke-dasharray: 17;
   stroke-dashoffset: 67;
@@ -141,7 +141,7 @@ article {
 
 .summary_title {
   font-size: 2rem;
-  color: #45a29e;
+  color: var(--accent);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,14 +156,14 @@ button.download_cv {
 
 button.download_cv:focus {
   outline: none;
-  border: 1px solid #66fcf1;
+  border: 1px solid var(--accent-strong);
   transform: scale(0.95);
 }
 
 button.download_cv:hover {
-  filter: drop-shadow(0 0 0.5em #66fcf1);
-  color: #66fcf1;
-  border-color: #66fcf1;
+  filter: drop-shadow(0 0 0.5em var(--accent-strong));
+  color: var(--accent-strong);
+  border-color: var(--accent-strong);
 }
 
 a.cta-button {
@@ -172,7 +172,7 @@ a.cta-button {
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  border: 1px solid #45a29e;
+  border: 1px solid var(--accent);
   padding: 1rem;
 }
 
@@ -181,11 +181,11 @@ a.cta-button {
 }
 
 .download_icon path {
-  stroke: #45a29e;
+  stroke: var(--accent);
 }
 
 p.summary_text {
-  color: #c5c6c7;
+  color: var(--text);
   text-align: start;
 }
 
@@ -195,77 +195,13 @@ p.summary_text {
 }
 
 span.tag {
-  color: #ff652f;
+  color: var(--tag);
   font-size: 3rem;
 }
 
 span.closing_slash {
-  color: #ff652f;
+  color: var(--tag);
   font-size: 2rem;
-}
-
-@media (prefers-color-scheme: light) {
-  .dima,
-  .makarov {
-    color: #edead0;
-  }
-
-  .picture_container {
-    filter: drop-shadow(0 0 0.2rem #ffcf56);
-  }
-
-  .picture_frame {
-    stroke: #ffcf56;
-  }
-
-  .picture_frame_reverse {
-    stroke: #ffcf56;
-  }
-
-  .picture {
-    filter: none;
-  }
-
-  .title_container {
-    color: #ffcf56;
-  }
-
-  .summary_title {
-    color: #ffcf56;
-  }
-
-  a.cta-button {
-    border: 1px solid #edead0;
-    color: #edead0;
-  }
-
-  a.cta-button:hover {
-    color: #ffcf56;
-    border-color: #ffcf56;
-    filter: drop-shadow(0 0 0.5em #edead0);
-  }
-
-  a.cta-button:hover svg path {
-    color: #ffcf56;
-    border-color: #ffcf56;
-    filter: drop-shadow(0 0 0.5em #edead0);
-  }
-
-  .download_icon path {
-    stroke: #edead0;
-  }
-
-  span.tag {
-    color: #f13c20;
-  }
-
-  span.closing_slash {
-    color: #f13c20;
-  }
-
-  p.summary_text {
-    color: black;
-  }
 }
 
 /* Keyframes for the SVG frame animation */

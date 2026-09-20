@@ -20,7 +20,10 @@
 
 .card {
   align-items: center;
-  background: #1f2833;
+  background: var(--surface);
+  /* border-box so the light-mode outline does not grow the card by 2px */
+  box-sizing: border-box;
+  border: 1px solid var(--surface-border);
   border-radius: 5px;
   overflow: hidden;
   max-width: 445px;
@@ -62,7 +65,7 @@
 
 .card-description {
   font-size: 0.9rem;
-  color: #666;
+  color: var(--text-dim);
   margin-bottom: 15px;
 }
 
@@ -85,16 +88,16 @@
 }
 
 .card-button_code:hover svg path {
-  fill: #66fcf1;
+  fill: var(--accent-strong);
 }
 
 .card-button_code svg path {
-  fill: #45a29e;
+  fill: var(--accent);
 }
 
 .projects_list_p {
   margin-bottom: 3rem;
-  color: #c5c6c7;
+  color: var(--text);
 }
 
 .card_title_wrapper {
@@ -123,44 +126,6 @@ h2.card-title {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-}
-
-@media (prefers-color-scheme: light) {
-  .projects_section_title {
-    color: #ffcf56;
-  }
-
-  .card {
-    background: #86baa1;
-  }
-
-  .card-title {
-    color: #0b0c10;
-  }
-
-  .card-description {
-    color: #1f2833;
-  }
-
-  .card-buttons a {
-    color: #edead0;
-  }
-
-  .card-buttons a:hover {
-    color: #ffcf56;
-  }
-
-  .card-buttons svg path {
-    fill: #edead0;
-  }
-
-  .card-buttons a:hover svg path {
-    fill: #ffcf56;
-  }
-
-  .projects_list_p {
-    color: #edead0;
-  }
 }
 
 @media screen and (max-width: 768px) {

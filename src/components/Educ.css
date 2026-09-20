@@ -30,8 +30,11 @@
   flex-direction: column;
   will-change: transform;
   transition: transform 0.5s;
-  background-color: #1f2833;
-  color: #8b8b8b; /* Text color for readability */
+  background-color: var(--surface);
+  /* border-box so the light-mode outline does not grow the card by 2px */
+  box-sizing: border-box;
+  border: 1px solid var(--surface-border);
+  color: var(--text-muted); /* Text color for readability */
   cursor: pointer;
   user-select: none;
   padding-top: 2rem;
@@ -41,7 +44,7 @@
 }
 
 .educ-card h3 {
-  color: #45a29e;
+  color: var(--accent);
   margin-bottom: 2rem;
   padding: 0.3rem;
 }
@@ -100,7 +103,7 @@
 }
 
 .country {
-  color: #8b8b8b;
+  color: var(--text-muted);
 }
 
 .educ-card:hover {
@@ -115,7 +118,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5); /* Dims the background */
+  background-color: var(--backdrop); /* Dims the background */
   z-index: 1000; /* Ensures it's behind the modal but on top of everything else */
 }
 
@@ -126,7 +129,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #1f2833;
+  background-color: var(--surface);
   border-radius: 8px;
   padding: 1.5rem;
   max-width: 90%;
@@ -139,7 +142,7 @@
 .studi-modal hr,
 .mitro-modal hr,
 .isg-modal hr {
-  border: 1px solid #0b0c10;
+  border: 1px solid var(--bg);
   width: 100%;
 }
 
@@ -178,7 +181,7 @@
 .isg-modal_title {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #45a29e;
+  color: var(--accent);
 }
 
 .studi-modal_description,
@@ -186,7 +189,7 @@
 .isg-modal_description {
   font-size: 1rem;
   margin-bottom: 1.5rem;
-  color: #c5c6c7;
+  color: var(--text);
 }
 
 .studi-modal_close,
@@ -200,8 +203,8 @@
   align-items: center;
   gap: 0.5rem;
   background: transparent;
-  border: 1px solid #45a29e;
-  color: #45a29e;
+  border: 1px solid var(--accent);
+  color: var(--accent);
   padding: 1rem;
   -webkit-user-select: none;
   user-select: none;
@@ -212,14 +215,14 @@ button.studi-modal_close:focus,
 button.mitro-modal_close:focus,
 button.isg-modal_close:focus {
   outline: none;
-  border: 1px solid #66fcf1;
+  border: 1px solid var(--accent-strong);
   transform: scale(0.95);
 }
 
 .studi-modal_close:hover,
 .mitro-modal_close:hover,
 .isg-modal_close:hover {
-  filter: drop-shadow(0 0 0.5em #45a29e);
+  filter: drop-shadow(0 0 0.5em var(--accent));
 }
 
 ul.studi-modal_list,
@@ -238,73 +241,6 @@ ul.studi-modal_list li,
 ul.mitro-modal_list li,
 ul.isg-modal_list li {
   margin: 1rem 0;
-}
-
-@media (prefers-color-scheme: light) {
-  .educ_wrapper h2 {
-    color: #ffcf56;
-  }
-
-  .educ-card {
-    background-color: #86baa1;
-    color: #edead0; /* Text color for readability */
-  }
-
-  .studi-modal,
-  .mitro-modal,
-  .isg-modal {
-    background-color: #86baa1;
-  }
-
-  .studi-modal hr,
-  .mitro-modal hr,
-  .isg-modal hr {
-    border: 1px solid #3ab795;
-  }
-
-  .educ_card_card_title {
-    color: #0b0c10;
-  }
-
-  .educ-card h3 {
-    color: #0b0c10;
-  }
-
-  .educ_card_country span {
-    color: #0b0c10;
-  }
-
-  .studi-modal_title,
-  .mitro-modal_title,
-  .isg-modal_title {
-    color: #ffcf56;
-  }
-
-  .studi-modal_description,
-  .mitro-modal_description,
-  .isg-modal_description {
-    color: #0b0c10;
-  }
-
-  .studi-modal_close,
-  .mitro-modal_close,
-  .isg-modal_close {
-    border: 1px solid #edead0;
-    color: #edead0;
-  }
-
-  button.studi-modal_close:focus,
-  button.mitro-modal_close:focus,
-  button.isg-modal_close:focus {
-    border: 1px solid #ffcf56;
-  }
-
-  .studi-modal_close:hover,
-  .mitro-modal_close:hover,
-  .isg-modal_close:hover {
-    color: #ffcf56;
-    filter: drop-shadow(0 0 0.5em #45a29e);
-  }
 }
 
 @media screen and (max-width: 768px) {

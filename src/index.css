@@ -6,7 +6,33 @@
   initial-value: 0%;
 }
 
+/* ---------------------------------------------------------------------------
+   Design tokens.
+   Dark theme is the default and holds the original palette, value for value.
+   The light theme ("Paper & Ink") only redefines these same tokens, at the
+   bottom of this file - no component stylesheet knows a raw colour any more.
+   --------------------------------------------------------------------------- */
 :root {
+  --bg: #0b0c10; /* page background */
+  --surface: #1f2833; /* cards, modals, tiles, date boxes */
+  --surface-border: transparent; /* tile outline; only needed in light mode */
+  --text: #c5c6c7; /* primary body text */
+  --text-muted: #8b8b8b; /* secondary text */
+  --text-dim: #666; /* tertiary text, card descriptions */
+  --text-bright: #feffff; /* form inputs, timeline dates */
+  --accent: #45a29e; /* links, icons, frames, borders */
+  --accent-strong: #66fcf1; /* hover / focus / active */
+  --heading: #66fcf1; /* section titles, footer */
+  --tag: #ff652f; /* the < /> tags around the name */
+  --backdrop: rgba(0, 0, 0, 0.5); /* modal backdrop */
+  --glow-logo: #edead0; /* header logo hover glow */
+
+  /* typewriter "code" colours */
+  --code-text: #fff;
+  --code-ident: #f78cee;
+  --code-value: #d1bd06;
+  --code-fn: #6ae651;
+
   font-family: Roboto Mono, monospace;
   line-height: 1.5;
   font-weight: 400;
@@ -14,8 +40,8 @@
   overflow-x: hidden;
 
   color-scheme: light dark;
-  color: #66fcf1;
-  background-color: #0b0c10;
+  color: var(--heading);
+  background-color: var(--bg);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -25,22 +51,22 @@
 
 a {
   font-weight: 500;
-  color: #45a29e;
+  color: var(--accent);
   text-decoration: inherit;
   will-change: filter;
 }
 a:hover {
-  color: #66fcf1;
-  filter: drop-shadow(0 0 0.5em #45a29e);
+  color: var(--accent-strong);
+  filter: drop-shadow(0 0 0.5em var(--accent));
 }
 
 a:active {
-  color: #66fcf1;
+  color: var(--accent-strong);
   transform: scale(0.95);
 }
 
 a:hover path {
-  stroke: #66fcf1;
+  stroke: var(--accent-strong);
 }
 
 body {
@@ -75,30 +101,34 @@ h2 {
 }
 
 .brackets {
-  color: #c5c6c7;
+  color: var(--text);
 }
 
+/* ---------------------------------------------------------------------------
+   Light theme: "Paper & Ink".
+   Warm paper instead of a colour wash, ink-dark text, deep teal for links and
+   terracotta for headings and hover. Only tokens are redefined here.
+   --------------------------------------------------------------------------- */
 @media (prefers-color-scheme: light) {
   :root {
-    color: #edead0;
-    background-color: #3ab795;
-  }
-  a {
-    color: #edead0;
-  }
-  a:hover {
-    color: #ffcf56;
-  }
+    --bg: #f7f5ef;
+    --surface: #ffffff;
+    --surface-border: #e4e0d4;
+    --text: #1f2833;
+    --text-muted: #5c6670;
+    --text-dim: #5c6670;
+    --text-bright: #1f2833;
+    --accent: #0f766e;
+    --accent-strong: #c2410c;
+    --heading: #c2410c;
+    --tag: #c2410c;
+    --backdrop: rgba(31, 40, 51, 0.45);
+    --glow-logo: #0f766e;
 
-  a:hover path {
-    stroke: #ffcf56;
-  }
-
-  .brackets {
-    color: #edead0;
-  }
-
-  button:hover {
-    border-color: #ffcf56;
+    --code-text: #1f2833;
+    --code-ident: #9333ea;
+    --code-value: #b45309;
+    --code-fn: #15803d;
   }
 }
+

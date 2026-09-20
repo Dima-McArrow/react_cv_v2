@@ -1,7 +1,7 @@
 .Typewriter {
   width: 100%;
   height: 100%;
-  color: #fff;
+  color: var(--code-text);
   letter-spacing: 0.15em;
 }
 
@@ -12,41 +12,19 @@
 }
 
 .Typewriter__wrapper {
-  color: #fff;
+  color: var(--code-text);
 }
 
 .whoAmI {
-  color: #f78cee;
+  color: var(--code-ident);
 }
 
 .dm_const {
-  color: #d1bd06;
+  color: var(--code-value);
 }
 
 .console_log {
-  color: #6ae651;
-}
-
-@media (prefers-color-scheme: light) {
-  .Typewriter {
-    color: #000;
-  }
-
-  .Typewriter__wrapper {
-    color: #000;
-  }
-
-  .whoAmI {
-    color: #9e1493;
-  }
-
-  .dm_const {
-    color: #ffe922;
-  }
-
-  .console_log {
-    color: #63ff47;
-  }
+  color: var(--code-fn);
 }
 
 @media screen and (max-width: 768px) {

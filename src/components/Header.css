@@ -19,7 +19,7 @@
 
 svg.logo path {
   fill: transparent;
-  stroke: #c5c6c7;
+  stroke: var(--text);
   stroke-dasharray: 300;
   stroke-dashoffset: 300;
   animation: draw 3s ease-in 1s forwards;
@@ -33,7 +33,7 @@ svg.logo path {
     fill: transparent;
   }
   100% {
-    fill: #c5c6c7;
+    fill: var(--text);
     stroke-dashoffset: 0;
   }
 }
@@ -45,16 +45,6 @@ svg.logo path {
   100% {
     opacity: 1;
     top: 0.1rem;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  svg.logo path {
-    stroke: #1f2833;
-  }
-
-  .header_container-mobile a {
-    filter: drop-shadow(0 0 0.5em #edead0);
   }
 }
 

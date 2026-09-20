@@ -1,0 +1,76 @@
+{
+  "title": "myProjects",
+  "intro": "Here are some of my projects",
+  "items": [
+    {
+      "id": "nexus-tools",
+      "title": "Nexus Tools",
+      "image": "nexusTools",
+      "alt": "Nexus Tools",
+      "description": [
+        "A tool to generate secure passwords with various options for length and complexity. An easy-to-use calculator for determining percentages in real time. Roman Numeral Converter"
+      ],
+      "badge": "https://img.shields.io/website?url=https%3A%2F%2Fdima-mcarrow.github.io%2Fnexus-tools%2F",
+      "demo": "https://dima-mcarrow.github.io/nexus-tools/",
+      "code": "#code"
+    },
+    {
+      "id": "katana-in-stone",
+      "title": "Katana in a stone",
+      "image": "katana",
+      "alt": "Katana in a stone",
+      "description": [
+        "Try to pull out the katana from the stone. With a 1/2 chance.",
+        "A very simple 3D game made with Three.js"
+      ],
+      "badge": "https://img.shields.io/website?url=https%3A%2F%2Fdima-mcarrow.github.io%2Fkatana_in_stone%2Fdist%2Findex.html",
+      "demo": "https://dima-mcarrow.github.io/katana_in_stone/dist/index.html",
+      "code": "https://github.com/Dima-McArrow/katana_in_stone"
+    },
+    {
+      "id": "todo",
+      "title": "ToDo App",
+      "image": "todo",
+      "alt": "ToDo",
+      "description": [
+        "The classic ToDo app with the ability to add, delete, and mark as done tasks.",
+        "React front-end app with a PHP and MySQL back-end."
+      ],
+      "badge": "https://img.shields.io/badge/website-down-red",
+      "code": "https://github.com/Dima-McArrow/todo_react"
+    },
+    {
+      "id": "sandrine-coupart",
+      "title": "Sandrine Coupart",
+      "image": "sandrine",
+      "alt": "Sandrine Coupart",
+      "description": [
+        "A website for Sandrine Coupart, a fictional dietitian, featuring healthy recipes, user comments, evaluations, and a contact form. It’s designed to promote wellness through an engaging and functional user experience."
+      ],
+      "badge": "https://img.shields.io/badge/website-down-red",
+      "code": "https://github.com/Dima-McArrow/sandrine-coupart-site"
+    },
+    {
+      "id": "sandrine-coupart-cms",
+      "title": "Sandrine Coupart CMS",
+      "image": "sandrineCms",
+      "alt": "Sandrine Coupart CMS",
+      "description": [
+        "This project is a content management system (CMS) designed for managing allergens, recipes, user accounts, reviews, and testimonials for the website of Sandrine Coupart, a fictional entity."
+      ],
+      "badge": "https://img.shields.io/badge/website-down-red",
+      "code": "https://github.com/Dima-McArrow/sandrine-coupart-cms"
+    },
+    {
+      "id": "garage-v-parrot",
+      "title": "Car workshop \"Garage V. Parrot\"",
+      "imageClass": "parrot-image",
+      "alt": "Garage V. Parrot",
+      "description": [
+        "This project is a web site and a CMS designed for managing the website of Garage V. Parrot, a fictional entity specialized in car services and used cars sales."
+      ],
+      "badge": "https://img.shields.io/badge/website-down-red",
+      "code": "https://github.com/Dima-McArrow/ECF_LE_PROJET_Garage_automobile"
+    }
+  ]
+}

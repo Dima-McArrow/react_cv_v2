@@ -10,7 +10,7 @@
   width: 100%;
   position: fixed;
   top: 0;
-  background: #0b0c10;
+  background: var(--bg);
   height: 100vh;
   user-select: none;
   z-index: 1000;
@@ -21,7 +21,7 @@
 
 .mobile_menu circle,
 .mobile_menu path {
-  stroke: #45a29e;
+  stroke: var(--accent);
 }
 
 .nav__switch {
@@ -49,14 +49,3 @@
   background: none;
 }
 
-@media (prefers-color-scheme: light) {
-  .mobile_nav {
-    background: #3ab795;
-    color: #a0e8af;
-  }
-
-  .mobile_menu circle,
-  .mobile_menu path {
-    stroke: #a0e8af;
-  }
-}

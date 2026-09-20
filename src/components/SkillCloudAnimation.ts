@@ -180,6 +180,15 @@ export function initSkillCloudAnimation() {
 
   let isAnimating = true;
 
+  // Respect the OS-level "reduce motion" setting: the cloud stays still and the
+  // user can still rotate it by hand. matchMedia is watched live, so toggling
+  // the setting takes effect without a reload.
+  const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  let prefersReducedMotion = reducedMotion.matches;
+  reducedMotion.addEventListener("change", (event) => {
+    prefersReducedMotion = event.matches;
+  });
+
   // Detect when the user starts or stops interacting with the controls
   controls.addEventListener("start", () => {
     isAnimating = false; // Stop animation when user starts interacting
@@ -189,14 +198,22 @@ export function initSkillCloudAnimation() {
     isAnimating = true; // Resume animation when user stops interacting
   });
 
+  // Rotation is expressed in radians per SECOND, not per frame, so the cloud
+  // spins at the same speed on a 60 Hz and on a 120 Hz display.
+  // 0.18 rad/s ~= one full turn every 35 s.
+  const ROTATION_SPEED = 0.18;
+  const MAX_DELTA = 0.1; // clamp: a backgrounded tab returns a huge delta
+  const clock = new THREE.Clock();
+
   // Animation loop
   function animate() {
     requestAnimationFrame(animate);
 
+    const delta = Math.min(clock.getDelta(), MAX_DELTA);
+
     // Rotate the icon group only if animation is enabled
-    if (isAnimating) {
-      iconGroup.rotation.y += 0.005;
-      // iconGroup.rotation.x += 0.003;
+    if (isAnimating && !prefersReducedMotion) {
+      iconGroup.rotation.y += ROTATION_SPEED * delta;
     }
 
     // Make each icon face the camera
