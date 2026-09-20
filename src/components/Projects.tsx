@@ -27,6 +27,8 @@ type Project = {
   demo?: string;
   // Production client work has no public repository, so this is optional.
   code?: string;
+  // Overrides the automatic scroll animation below.
+  aos?: string;
 };
 
 type ProjectsContent = {
@@ -36,6 +38,15 @@ type ProjectsContent = {
 };
 
 const { title, intro, items } = content as ProjectsContent;
+
+// The cards wrap two per row. An odd last card therefore sits alone and
+// centred, and sliding it in from the side reads as a mistake - there is
+// nothing beside it to slide past. It rises from the bottom instead.
+const scrollAnimation = (project: Project, index: number, total: number) => {
+  if (project.aos) return project.aos;
+  if (index === total - 1 && total % 2 === 1) return "fade-up";
+  return index % 2 === 0 ? "slide-right" : "slide-left";
+};
 
 const GithubIcon = () => (
   <svg
@@ -70,7 +81,7 @@ export const Projects = () => {
           {items.map((project, index) => (
             <div
               key={project.id}
-              data-aos={index % 2 === 0 ? "slide-right" : "slide-left"}
+              data-aos={scrollAnimation(project, index, items.length)}
               className="card"
             >
               <div className="card-image_wrapper">
