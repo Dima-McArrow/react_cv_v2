@@ -1,12 +1,7 @@
 declare module "three/examples/jsm/controls/OrbitControls" {
-  import {
-    Camera,
-    EventDispatcher,
-    MOUSE,
-    Object3D,
-    TOUCH,
-    Vector3,
-  } from "three";
+  import { Camera, EventDispatcher, MOUSE, TOUCH, Vector3 } from "three";
+
+  type OrbitControlsEvent = { type: string; target: unknown };
 
   export class OrbitControls extends EventDispatcher {
     constructor(object: Camera, domElement?: HTMLElement);
@@ -73,12 +68,21 @@ declare module "three/examples/jsm/controls/OrbitControls" {
     getAzimuthalAngle(): number;
 
     // EventDispatcher mixins
-    addEventListener(type: string, listener: (event: any) => void): void;
+    addEventListener(
+      type: string,
+      listener: (event: OrbitControlsEvent) => void,
+    ): void;
 
-    hasEventListener(type: string, listener: (event: any) => void): boolean;
+    hasEventListener(
+      type: string,
+      listener: (event: OrbitControlsEvent) => void,
+    ): boolean;
 
-    removeEventListener(type: string, listener: (event: any) => void): void;
+    removeEventListener(
+      type: string,
+      listener: (event: OrbitControlsEvent) => void,
+    ): void;
 
-    dispatchEvent(event: { type: string; target: any }): void;
+    dispatchEvent(event: OrbitControlsEvent): void;
   }
 }

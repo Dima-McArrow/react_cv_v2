@@ -2,6 +2,14 @@ import "./skillCloudAnimation.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
+import cloudContent from "../content/skillCloud.json";
+
+// Paths are resolved at runtime by THREE.TextureLoader, so these files must
+// live in public/ and the base path has to be prepended by hand.
+const icons = cloudContent.icons.map(
+  (icon) => `${import.meta.env.BASE_URL}${icon}`,
+);
+
 export function initSkillCloudAnimation() {
   // Create the canvas element dynamically
   const canvasContainer = document.querySelector<HTMLDivElement>(
@@ -70,7 +78,6 @@ export function initSkillCloudAnimation() {
     loader.load(
       url,
       (texture) => {
-        console.log(`Attempting to place icon: ${url}`);
         let position;
         let attempts = 0;
         const MAX_ATTEMPTS = 50;
@@ -94,9 +101,6 @@ export function initSkillCloudAnimation() {
 
         const icon = createIcon(texture, position);
         iconGroup.add(icon);
-        console.log(
-          `Successfully placed icon: ${url} after ${attempts} attempts`,
-        );
       },
       undefined,
       (err) => {
@@ -104,58 +108,6 @@ export function initSkillCloudAnimation() {
       },
     );
   }
-
-  // Load all icons
-  const icons = [
-    "svg/gh.svg",
-    "svg/git.svg",
-    "svg/php.svg",
-    "svg/sass.svg",
-    "svg/node.svg",
-    "svg/js.svg",
-    "svg/ts.svg",
-    "svg/html.svg",
-    "svg/css.svg",
-    "svg/figma.svg",
-    "svg/docker.svg",
-    "svg/gc.svg",
-    "svg/gitlab.svg",
-    "svg/mysql.svg",
-    "svg/sqlite.svg",
-    "svg/heroku.svg",
-    "svg/macos.svg",
-    "svg/jquery.svg",
-    "svg/react.svg",
-    "svg/vue.svg",
-    "svg/wp.svg",
-    "svg/namecheap.svg",
-    "svg/windows.svg",
-    "svg/trello.svg",
-    "svg/shields.svg",
-    "svg/npm.svg",
-    "svg/vitejs.svg",
-    "svg/vsc.svg",
-    "svg/tailwindcss.svg",
-    "svg/nginx.svg",
-    "svg/debian.svg",
-    "svg/blender.svg",
-    "svg/bash.svg",
-    "svg/aws.svg",
-    "svg/ubuntu.svg",
-    "svg/powershell.svg",
-    "svg/threejs.svg",
-    "svg/linux.svg",
-    "svg/markdown.svg",
-    "svg/express.svg",
-    "svg/material-ui.svg",
-    "svg/neovim.svg",
-    "svg/python.svg",
-    "svg/svg.svg",
-    "svg/mongodb.svg",
-    "svg/moleculer.svg",
-    "svg/astro.svg",
-    "svg/alpinejs.svg",
-  ];
 
   icons.forEach(loadIcon);
 

@@ -46,6 +46,39 @@
   margin: 0;
 }
 
+/* Skills from the CV that have no icon available, listed as plain chips so
+   nothing is silently dropped from the stack. */
+.skills_also {
+  max-width: 60rem;
+  margin: 3rem auto 0 auto;
+  padding: 0 1rem;
+}
+
+.skills_also_title {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0 0 1rem 0;
+}
+
+.skills_also_list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.skills_also_list li {
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
 @media screen and (max-width: 768px) {
   .skillsSet {
     flex-direction: column;

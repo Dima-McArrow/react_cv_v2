@@ -2,7 +2,42 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./Skills.css";
+
+import content from "../content/skills.json";
 import moleculer from "../moleculer.png";
+
+type Skill = {
+  name: string;
+  icon: string;
+  // true when the icon ships with the project instead of coming from skillicons
+  local?: boolean;
+};
+
+type SkillsContent = {
+  title: string;
+  items: Skill[];
+  alsoTitle: string;
+  also: string[];
+};
+
+const { title, items, alsoTitle, also } = content as SkillsContent;
+
+const localIcons: Record<string, string> = {
+  moleculer,
+};
+
+const iconUrl = (skill: Skill) =>
+  skill.local
+    ? localIcons[skill.icon]
+    : `https://skillicons.dev/icons?i=${skill.icon}`;
+
+// The tiles animate in rows of three, alternating direction - same as before,
+// only now the rows are derived from the list instead of being written by hand.
+const ROW_SIZE = 3;
+const rows = Array.from(
+  { length: Math.ceil(items.length / ROW_SIZE) },
+  (_, i) => items.slice(i * ROW_SIZE, i * ROW_SIZE + ROW_SIZE),
+);
 
 export const Skills = () => {
   useEffect(() => {
@@ -13,204 +48,42 @@ export const Skills = () => {
     <section id="skills" className="section_skills">
       <article>
         <h2 className="h2_skills">
-          stack<span className="brackets">()</span>
+          {title}
+          <span className="brackets">()</span>
         </h2>
         <div className="skills_container">
-          <div data-aos="slide-right" className="skillsSet">
-            <div className="skill">
-              <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=git" alt="Git" />
-              </p>
-              <p>Git</p>
+          {rows.map((row, index) => (
+            <div
+              key={row[0].name}
+              data-aos={index % 2 === 0 ? "slide-right" : "slide-left"}
+              className="skillsSet"
+            >
+              {row.map((skill) => (
+                <div key={skill.name} className="skill">
+                  <p className="p_to_center">
+                    <img
+                      src={iconUrl(skill)}
+                      alt={skill.name}
+                      width="48"
+                      height="48"
+                      loading="lazy"
+                    />
+                  </p>
+                  <p>{skill.name}</p>
+                </div>
+              ))}
             </div>
-            <div className="skill">
-              <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=github" alt="GitHub" />
-              </p>
-              <p>GitHub</p>
-            </div>
-            <div className="skill">
-              <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=gitlab" alt="GitLab" />
-              </p>
-              <p>GitLab</p>
-            </div>
-          </div>
-          <div data-aos="slide-left" className="skillsSet">
-            <div className="skill">
-              <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=html" alt="HTML" />
-              </p>
-              <p>HTML5</p>
-            </div>
-            <div className="skill">
-              <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=css" alt="CSS" />
-              </p>
-              <p>CSS3</p>
-            </div>
-            <div className="skill">
-              <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=sass" alt="Sass" />
-              </p>
-              <p>Sass / SCSS</p>
-            </div>
-          </div>
-          <div data-aos="slide-right" className="skillsSet">
-            <div className="skill">
-              <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=js" alt="JS" />
-              </p>
-              <p>JavaScript</p>
-            </div>
-            <div className="skill">
-              <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=nodejs" alt="Node" />
-              </p>
-              <p>Node</p>
-            </div>
-            <div className="skill">
-              <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=npm" alt="npm" />
-              </p>
-              <p>npm</p>
-            </div>
-          </div>
-          <div data-aos="slide-left" className="skillsSet">
-            <div className="skill">
-              <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=vite" alt="Vite" />
-              </p>
-              <p>Vite</p>
-            </div>
-            <div className="skill">
-              <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=react" alt="React" />
-              </p>
-              <p>React</p>
-            </div>
-            <div className="skill">
-              <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=typescript" alt="TS" />
-              </p>
-              <p>TypeScript</p>
-            </div>
-          </div>
-          <div data-aos="slide-right" className="skillsSet">
-            <div className="skill">
-              <p className="p_to_center">
-                <img
-                  src="https://skillicons.dev/icons?i=threejs"
-                  alt="Three.js"
-                />
-              </p>
-              <p>Three.js</p>
-            </div>
-            <div className="skill">
-              <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=svg" alt="SVG" />
-              </p>
-              <p>SVG</p>
-            </div>
-            <div className="skill">
-              <p className="p_to_center">
-                <img
-                  src="https://skillicons.dev/icons?i=express"
-                  alt="Express"
-                />
-              </p>
-              <p>Express</p>
-            </div>
-          </div>
-          <div data-aos="slide-left" className="skillsSet">
-            <div className="skill">
-              <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=php" alt="PHP" />
-              </p>
-              <p>PHP</p>
-            </div>
-            <div className="skill">
-              <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=mysql" alt="MySQL" />
-              </p>
-              <p>MySQL</p>
-            </div>
-            <div className="skill">
-              <p className="p_to_center">
-                <img
-                  src="https://skillicons.dev/icons?i=mongodb"
-                  alt="MongoDB"
-                />
-              </p>
-              <p>MongoDB</p>
-            </div>
-          </div>
-          <div data-aos="slide-right" className="skillsSet">
-            <div className="skill">
-              <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=aws" alt="AWS" />
-              </p>
-              <p>AWS</p>
-            </div>
-            <div className="skill">
-              <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=gcp" alt="GCP" />
-              </p>
-              <p>Google Cloud</p>
-            </div>
-            <div className="skill">
-              <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=heroku" alt="Heroku" />
-              </p>
-              <p>Heroku</p>
-            </div>
-          </div>
-          <div data-aos="slide-left" className="skillsSet">
-            <div className="skill">
-              <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=astro" alt="Astro" />
-              </p>
-              <p>Astro</p>
-            </div>
-            <div className="skill">
-              <p className="p_to_center">
-                <img
-                  src="https://skillicons.dev/icons?i=tailwind"
-                  alt="Tailwind"
-                />
-              </p>
-              <p>Tailwind</p>
-            </div>
-            <div className="skill">
-              <p className="p_to_center">
-                <img
-                  src="https://skillicons.dev/icons?i=alpinejs"
-                  alt="Alpine JS"
-                />
-              </p>
-              <p>Alpine JS</p>
-            </div>
-          </div>
-          <div data-aos="slide-up" className="skillsSet">
-            <div className="skill">
-              <p className="p_to_center">
-                <img src={moleculer} alt="Moleculer" width="48" height="48" />
-              </p>
-              <p>Moleculer</p>
-            </div>
-            <div className="skill">
-              <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=docker" alt="Docker" />
-              </p>
-              <p>Docker</p>
-            </div>
-            <div className="skill">
-              <p className="p_to_center">
-                <img src="https://skillicons.dev/icons?i=prisma" alt="Prisma" />
-              </p>
-              <p>Prisma</p>
-            </div>
-          </div>
+          ))}
+        </div>
+
+        {/* Everything in the CV that skillicons.dev has no icon for. */}
+        <div data-aos="fade-up" className="skills_also">
+          <p className="skills_also_title">{alsoTitle}</p>
+          <ul className="skills_also_list">
+            {also.map((entry) => (
+              <li key={entry}>{entry}</li>
+            ))}
+          </ul>
         </div>
       </article>
     </section>

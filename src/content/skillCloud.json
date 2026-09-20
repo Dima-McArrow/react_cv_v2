@@ -1,0 +1,40 @@
+{
+  "icons": [
+    "svg/ts.svg",
+    "svg/js.svg",
+    "svg/react.svg",
+    "svg/astro.svg",
+    "svg/alpinejs.svg",
+    "svg/tailwindcss.svg",
+    "svg/html.svg",
+    "svg/css.svg",
+    "svg/threejs.svg",
+
+    "svg/node.svg",
+    "svg/express.svg",
+    "svg/moleculer.svg",
+    "svg/prisma.svg",
+    "svg/firebase.svg",
+
+    "svg/docker.svg",
+    "svg/gc.svg",
+    "svg/githubactions.svg",
+    "svg/linux.svg",
+    "svg/ubuntu.svg",
+    "svg/nginx.svg",
+    "svg/bash.svg",
+
+    "svg/git.svg",
+    "svg/gh.svg",
+    "svg/npm.svg",
+    "svg/vitejs.svg",
+    "svg/vitest.svg",
+    "svg/vsc.svg",
+    "svg/neovim.svg",
+    "svg/figma.svg",
+    "svg/markdown.svg",
+    "svg/macos.svg",
+    "svg/shields.svg",
+    "svg/svg.svg"
+  ]
+}

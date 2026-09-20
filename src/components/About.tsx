@@ -1,6 +1,14 @@
 import "./About.css";
 import { TypewriterComponent } from "./Message";
 
+import content from "../content/about.json";
+
+const { firstName, lastName, jobTitle, summaryLabel, cv } = content;
+
+// The CV lives in public/, so the deployment base path has to be prepended:
+// a bare relative href breaks on any URL without a trailing slash.
+const cvHref = `${import.meta.env.BASE_URL}${cv.file}`;
+
 export const About = () => {
   return (
     <section className="section_about" id="about">
@@ -20,28 +28,27 @@ export const About = () => {
             </div>
             <div className="name_container">
               <div className="dima">
-                <span className="tag">&lt;</span>Dimitri
+                <span className="tag">&lt;</span>
+                {firstName}
               </div>
               <div className="makarov">
-                Makarov<span className="closing_slash">&nbsp;/</span>
+                {lastName}
+                <span className="closing_slash">&nbsp;/</span>
                 <span className="tag">&gt;</span>
               </div>
             </div>
-            <div className="title_container">Full-Stack Developer</div>
+            <div className="title_container">{jobTitle}</div>
           </div>
           <div className="about_right">
             <div className="summary_title">
-              <span className="tag">&lt;</span>Summary
+              <span className="tag">&lt;</span>
+              {summaryLabel}
               <span className="closing_slash">&nbsp;/</span>
               <span className="tag">&gt;</span>
             </div>
             <TypewriterComponent />
             <div className="download_cv">
-              <a
-                href="Dimitri_Makarov_Resume.pdf"
-                className="cta-button"
-                download
-              >
+              <a href={cvHref} className="cta-button" download>
                 <svg
                   width="30"
                   height="30"
@@ -56,7 +63,7 @@ export const About = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-                CV (PDF)
+                {cv.label}
               </a>
             </div>
           </div>

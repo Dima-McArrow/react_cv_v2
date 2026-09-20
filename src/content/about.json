@@ -1,0 +1,15 @@
+{
+  "firstName": "Dimitri",
+  "lastName": "Makarov",
+  "jobTitle": "Full-Stack Developer",
+  "summaryLabel": "Summary",
+  "cv": {
+    "label": "CV (PDF)",
+    "file": "Dimitri_Makarov_CV_CDI.pdf"
+  },
+  "typewriter": {
+    "constName": "whoAmI",
+    "value": "Dima Makarov"
+  },
+  "summary": "Full-stack developer covering the whole chain: a reactive front end (React, Astro, Alpine.js), a Node.js API, containerisation and continuous delivery on Google Cloud. I shipped an editorial media platform to production single-handed — 67,000 lines, 8 content types, 51 admin screens (MAAG) — and worked in a team of four on a B2B SaaS run in TDD and BDD/Gherkin (Mentormatic). A deliberate career change: nearly twenty years of production management and client relations before the code, which is where my ease with scoping and hitting deadlines comes from. Trilingual — French and Russian native, English C1."
+}

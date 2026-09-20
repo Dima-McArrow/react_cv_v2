@@ -1,0 +1,53 @@
+{
+  "title": "stack",
+  "items": [
+    { "name": "TypeScript", "icon": "ts" },
+    { "name": "React", "icon": "react" },
+    { "name": "Astro", "icon": "astro" },
+
+    { "name": "Alpine JS", "icon": "alpinejs" },
+    { "name": "Tailwind", "icon": "tailwind" },
+    { "name": "HTML5", "icon": "html" },
+
+    { "name": "CSS3", "icon": "css" },
+    { "name": "JavaScript", "icon": "js" },
+    { "name": "Three.js", "icon": "threejs" },
+
+    { "name": "Node", "icon": "nodejs" },
+    { "name": "Express", "icon": "express" },
+    { "name": "Moleculer", "icon": "moleculer", "local": true },
+
+    { "name": "Prisma", "icon": "prisma" },
+    { "name": "Firebase", "icon": "firebase" },
+    { "name": "Docker", "icon": "docker" },
+
+    { "name": "Google Cloud", "icon": "gcp" },
+    { "name": "GitHub Actions", "icon": "githubactions" },
+    { "name": "Linux", "icon": "linux" },
+
+    { "name": "Vite", "icon": "vite" },
+    { "name": "Vitest", "icon": "vitest" },
+    { "name": "npm", "icon": "npm" },
+
+    { "name": "Git", "icon": "git" },
+    { "name": "GitHub", "icon": "github" },
+    { "name": "Figma", "icon": "figma" }
+  ],
+  "alsoTitle": "Also working with",
+  "also": [
+    "Stripe API",
+    "Playwright",
+    "WebSocket / socket.io",
+    "Zod",
+    "JWT",
+    "MJML",
+    "Mantine Core",
+    "DaisyUI",
+    "REST API",
+    "GDPR / RGPD",
+    "BDD / Gherkin",
+    "Spec-Driven Development",
+    "Technical SEO",
+    "Monorepo (npm workspaces)"
+  ]
+}
