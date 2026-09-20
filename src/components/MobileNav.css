@@ -24,8 +24,19 @@
   stroke: var(--accent);
 }
 
-.nav__switch {
-  display: none;
+/* The burger used to be a hidden checkbox plus a label. Nothing in CSS ever
+   keyed off :checked, so it is a plain button now: undo the global button
+   styling from index.css. */
+.mobile_nav_toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .mobile_link_wrapper {
@@ -47,4 +58,6 @@
   border: none;
   outline: none;
   background: none;
+  /* the X is drawn with stroke: currentColor */
+  color: var(--text);
 }

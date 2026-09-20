@@ -1,7 +1,7 @@
 import "./Educ.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import content from "../content/education.json";
 import studi from "../studi.png";
@@ -30,23 +30,59 @@ const { title, modalCta, modalClose, items } = content as EducationContent;
 
 const logos: Record<string, string> = { studi, mitro, isg };
 
+const FOCUSABLE =
+  'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+
 export const Educ = () => {
   const [openId, setOpenId] = useState<string | null>(null);
   const open = items.find((item) => item.id === openId) ?? null;
+  const dialogRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     AOS.init({ duration: 1000 }); // Initialize AOS with custom settings
   }, []);
 
-  // Escape closes the dialog; the previous innerHTML version had no keyboard
-  // way out at all.
+  // Escape closes the dialog, and Tab is kept inside it: without this the
+  // focus ring walks off into the page behind the backdrop, where a keyboard
+  // user cannot see where they are.
   useEffect(() => {
     if (!open) return;
+
+    const dialog = dialogRef.current;
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+    dialog?.querySelector<HTMLElement>(FOCUSABLE)?.focus();
+
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setOpenId(null);
+      if (event.key === "Escape") {
+        setOpenId(null);
+        return;
+      }
+      if (event.key !== "Tab" || !dialog) return;
+
+      const focusable = Array.from(
+        dialog.querySelectorAll<HTMLElement>(FOCUSABLE),
+      );
+      if (focusable.length === 0) return;
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      const active = document.activeElement;
+
+      // Wrap around at both ends instead of leaving the dialog
+      if (event.shiftKey && active === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && active === last) {
+        event.preventDefault();
+        first.focus();
+      }
     };
+
     document.addEventListener("keydown", onKeyDown);
-    return () => document.removeEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      previouslyFocused?.focus(); // back to the card that opened the dialog
+    };
   }, [open]);
 
   return (
@@ -96,6 +132,7 @@ export const Educ = () => {
             role="dialog"
             aria-modal="true"
             aria-label={open.school}
+            ref={dialogRef}
           >
             <div className="educ-modal_content">
               <div className="educ-modal_image">
@@ -109,6 +146,7 @@ export const Educ = () => {
                 {modalCta}
               </a>
               <button
+                type="button"
                 className="educ-modal_close"
                 onClick={() => setOpenId(null)}
               >

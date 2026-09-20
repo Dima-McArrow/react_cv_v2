@@ -67,13 +67,14 @@ global box-sizing reset and the border would otherwise grow the tile by 2px.
 
 ## Known rough edges (don't "fix" silently, mention them first)
 
-- `MobileNav.tsx` still builds its menu with `document.createElement` +
-  `innerHTML` inside a `useEffect` instead of using React state. Works, but
-  it's imperative DOM manipulation living inside React. `Educ.tsx` used to do
-  the same and has been converted; `MobileNav` is the last one.
-- The education modal uses `role="dialog"` rather than a native `<dialog>`,
-  and does not trap focus. Escape and the Close button are the keyboard paths
-  out.
+- The education modal uses `role="dialog"` rather than a native `<dialog>`.
+  It traps Tab, closes on Escape and restores focus to the card that opened
+  it, but it is not a `<dialog>` and so does not get the top layer.
+- The one remaining `innerHTML` is in `Message.tsx`, clearing the wrapper
+  that `typewriter-effect` owns. That one is the library's DOM, not ours.
+- The mobile overlay is rendered into `<body>` with `createPortal`, because
+  it is `position: fixed` and must not depend on an ancestor's containing
+  block. Keep it there.
 - `public/svg/` holds 19 icons that the skill cloud no longer lists (aws,
   blender, debian, gitlab, heroku, jquery, material-ui, mongodb, mysql,
   namecheap, php, powershell, python, sass, sqlite, trello, vim, windows, wp).
