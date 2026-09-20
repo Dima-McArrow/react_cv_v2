@@ -36,6 +36,8 @@
 
   /* The single vertical rhythm of the page. Change it here, nowhere else. */
   --section-gap: 8rem;
+  --section-title-gap: 4rem;
+  --content-gap: 3rem;
 
   /* The header is position: absolute, so it takes up no space in the flow.
      The first section has to leave room for it by hand. */
@@ -112,13 +114,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-/* This was `line-height: 5`, which built a 120px line box around 24px of text
-   and put ~48px of untouchable space above and below every section title.
-   It read as a huge margin that was nowhere to be found in the margin. The
-   space below a title is now an explicit margin instead. */
+/* One explicit title-to-content gap across all sections. */
 h2 {
   line-height: 1.2;
-  margin: 0 0 2rem 0;
+  margin: 0 0 var(--section-title-gap);
 }
 
 .brackets {
@@ -129,12 +128,11 @@ h2 {
    Page rhythm. Every section is as tall as its own content and separated from
    the next by exactly one gap. Section stylesheets must not set vertical
    margins of their own - that is what made the spacing uneven before.
-   The skill cloud is the one section that keeps min-height: 100vh, because
-   its WebGL canvas is sized to the viewport.
    --------------------------------------------------------------------------- */
 main > section,
 main > footer {
   margin-top: var(--section-gap);
+  margin-inline: auto;
 }
 
 main > section:first-of-type {

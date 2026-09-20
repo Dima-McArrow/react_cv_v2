@@ -194,21 +194,18 @@ export function initSkillCloudAnimation() {
   window.addEventListener("resize", adjustCanvasSize);
 
   function adjustCanvasSize() {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
+    const width = canvasContainer.clientWidth;
+    const height = canvasContainer.clientHeight;
 
-    // Adjust renderer and camera for mobile
-    if (width < 768) {
-      const aspectRatio = 9 / 16; // Aspect ratio for mobile (portrait mode)
-      const mobileHeight = width * aspectRatio;
-      renderer.setSize(width, mobileHeight);
-      camera.aspect = width / mobileHeight;
-      camera.position.z = 11; // Adjust camera position for mobile
-    } else {
-      renderer.setSize(width, height);
-      camera.aspect = width / height;
-      camera.position.z = 15;
-    }
+    renderer.setSize(width, height);
+    camera.aspect = width / height;
+    // Fit the full cloud inside its content-sized canvas on narrow screens.
+    const verticalFov = THREE.MathUtils.degToRad(camera.fov / 2);
+    const horizontalFov = Math.atan(Math.tan(verticalFov) * camera.aspect);
+    camera.position.z = Math.max(
+      7 / Math.sin(verticalFov),
+      9 / Math.sin(horizontalFov),
+    );
 
     camera.updateProjectionMatrix();
   }

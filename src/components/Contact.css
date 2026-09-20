@@ -8,13 +8,9 @@
   position: relative;
 }
 
-.section_contact h2 {
-  margin-bottom: 7rem;
-}
-
 .contact-form_wrapper {
   width: 80%;
-  margin: 0 auto 3rem auto;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -129,7 +125,7 @@ form {
 button.contact_button {
   border-radius: 7px;
   width: 20%;
-  margin: 3rem auto 2rem auto;
+  margin: 1rem auto 0;
   display: flex;
   justify-content: center;
   align-items: center;
