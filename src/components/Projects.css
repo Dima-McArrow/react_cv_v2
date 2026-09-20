@@ -18,6 +18,9 @@
   column-gap: 1.3rem;
 }
 
+/* No fixed height: the card grows with its text. Cards on the same row still
+   end up equal height, because a flex item with no height set stretches to the
+   tallest item in its row. */
 .card {
   align-items: center;
   background: var(--surface);
@@ -25,15 +28,13 @@
   box-sizing: border-box;
   border: 1px solid var(--surface-border);
   border-radius: 5px;
-  overflow: hidden;
+  overflow: hidden; /* keeps the screenshot inside the rounded corner */
   max-width: 445px;
   will-change: transform;
   transition: transform 0.3s;
-  height: 37rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  padding-bottom: 3rem;
+  padding-bottom: 1.5rem;
 }
 
 .card:hover {
@@ -41,18 +42,22 @@
 }
 
 .card-image_wrapper {
-  height: 50%;
   width: 100%;
 }
 
 .card img {
+  display: block;
   width: 100%;
-  object-fit: contain;
+  height: auto;
 }
 
+/* flex: 1 makes the text block absorb the leftover height, which keeps the
+   buttons pinned to the bottom of every card regardless of text length. */
 .card-content {
+  box-sizing: border-box;
+  width: 100%;
   padding: 20px;
-  height: 50%;
+  flex: 1;
 }
 
 .card-title {
@@ -70,9 +75,13 @@
 }
 
 .card-buttons {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.5rem;
 }
 
 .card-buttons a {
@@ -101,7 +110,7 @@
 }
 
 .card_title_wrapper {
-  height: 7rem;
+  min-height: 3.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -115,38 +124,20 @@ img.card-badge {
 }
 
 h2.card-title {
-  line-height: 1;
-  height: 3rem;
+  line-height: 1.2;
+  margin: 0;
 }
 
-.parrot-image {
-  width: 100%;
-  height: 250px;
-  background-image: url(../parrot.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
 
 @media screen and (max-width: 768px) {
   .section_projects {
     margin: -181px auto 5rem auto;
   }
-  .card {
-    min-height: 37rem;
-    justify-content: space-between;
-  }
-
   .card:hover {
     transform: none;
   }
 
-  .card-content {
-    padding: 20px;
-    height: 34%;
-  }
-
   .card_title_wrapper {
-    height: 2rem;
+    min-height: 2rem;
   }
 }

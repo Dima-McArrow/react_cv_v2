@@ -5,20 +5,16 @@ import { useEffect } from "react";
 
 import content from "../content/projects.json";
 
-import nexusTools from "../nexus_tools.png";
-import katana from "../katana.png";
-import todo from "../todo.png";
-import sandrine from "../sandrine.png";
-import sandrineCms from "../sandrinecms.png";
+import maag from "../assets/projects/maag.webp";
+import mentormatic from "../assets/projects/mentormatic.webp";
+import wurkspaces from "../assets/projects/wurkspaces.webp";
 
 // JSON can only hold strings, so images are referenced by key and resolved here.
 // Static imports are what lets Vite hash and rewrite the asset URLs at build time.
 const images: Record<string, string> = {
-  nexusTools,
-  katana,
-  todo,
-  sandrine,
-  sandrineCms,
+  maag,
+  mentormatic,
+  wurkspaces,
 };
 
 type Project = {
@@ -27,10 +23,10 @@ type Project = {
   alt: string;
   description: string[];
   badge: string;
-  code: string;
-  image?: string;
-  imageClass?: string;
+  image: string;
   demo?: string;
+  // Production client work has no public repository, so this is optional.
+  code?: string;
 };
 
 type ProjectsContent = {
@@ -78,11 +74,7 @@ export const Projects = () => {
               className="card"
             >
               <div className="card-image_wrapper">
-                {project.image ? (
-                  <img src={images[project.image]} alt={project.alt} />
-                ) : (
-                  <div className={project.imageClass}></div>
-                )}
+                <img src={images[project.image]} alt={project.alt} />
               </div>
               <div className="card-content">
                 <div className="card_title_wrapper">
@@ -105,14 +97,16 @@ export const Projects = () => {
                     Demo
                   </a>
                 )}
-                <a
-                  href={project.code}
-                  target="_blank"
-                  className="card-button_code"
-                >
-                  Code
-                  <GithubIcon />
-                </a>
+                {project.code && (
+                  <a
+                    href={project.code}
+                    target="_blank"
+                    className="card-button_code"
+                  >
+                    Code
+                    <GithubIcon />
+                  </a>
+                )}
               </div>
             </div>
           ))}

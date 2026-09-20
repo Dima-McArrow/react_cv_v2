@@ -71,12 +71,19 @@ global box-sizing reset and the border would otherwise grow the tile by 2px.
   `innerHTML` inside `useEffect`/click handlers instead of using React state.
   Works, but it's imperative DOM manipulation living inside React.
 - `src/components/Langs.tsx` is dead code — imported by nothing, and links to
-  `index_ru.html` / `index.html` pages that don't exist in this SPA.
+  `index_ru.html` / `index.html` pages that don't exist in this SPA. Its CSS also
+  references `var(--focus-color)`, a token that is not defined anywhere.
 - `SkillCloudAnimation.ts` references `svg/vue.svg`, which is not in `public/svg/`
-  (48 files there, 1 referenced file missing) → console error on load.
-- `Projects.tsx`: the GitHub icon SVG path is duplicated inline once per card.
-- The "Nexus Tools" card's Code link points at `#code` (placeholder).
+  (48 files there, 1 referenced file missing) → console error on load. The icon
+  set is also still the pre-2025 stack (jQuery, WordPress, MySQL, Blender).
+- `src/*.png` still holds six orphaned screenshots of the old school projects
+  (nexus_tools, katana, todo, sandrine, sandrinecms, parrot — 3.8 MB). Nothing
+  imports them any more, so they no longer reach the bundle, but they are still
+  tracked in git.
+- `Skills.tsx` is still hardcoded JSX and lists a pre-2025 stack.
 - `Footer.tsx` hardcodes `© 2024`.
+- `public/Dimitri_Makarov_Resume.pdf` is the 2024 resume and is what the About
+  CV button downloads; the current CV is `Dimitri_Makarov_CV_CDI.pdf`.
 - Security history: commit 47b8844 removed a malicious JS loader from
   `eslint.config.js`. If anything odd reappears in build/config files, stop and
   flag it.

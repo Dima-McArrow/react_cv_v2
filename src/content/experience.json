@@ -1,0 +1,96 @@
+{
+  "title": "experience",
+  "current": {
+    "role": "Full-Stack Web Developer",
+    "employment": "Freelance / Independent",
+    "location": "Île-de-France, France",
+    "start": "01 / 2025",
+    "end": "Present",
+    "note": "Client missions and product work run in parallel."
+  },
+  "projects": [
+    {
+      "id": "mentormatic",
+      "name": "Mentormatic",
+      "tagline": "B2B mentoring & coaching SaaS",
+      "context": "Team of 4 developers",
+      "start": "01 / 2025",
+      "end": "04 / 2026",
+      "link": { "label": "mentormatic.com", "href": "https://mentormatic.com" },
+      "highlights": [
+        "Full-stack work on a B2B SaaS in production — Astro SSR, React and Alpine.js over Moleculer microservices — built in TDD and BDD/Gherkin, with feature flags, Vitest and Playwright suites, and Docker → Google Cloud Run deployments.",
+        "Designed and shipped the access-controlled note sharing system: a per-role permission matrix, sharing scoped to a programme or session, and automatic revocation of access on events.",
+        "Built an in-house Alpine.js lazy-loading layer for ~40 components using dynamic imports and skeleton-first rendering, cutting the initial JS bundle. Adopted by the whole team.",
+        "Led the response to an npm supply-chain malware incident: forensic investigation of a hijacked Git commit, then detection tooling and a blocking pre-commit hook."
+      ]
+    },
+    {
+      "id": "maag",
+      "name": "MAAG",
+      "tagline": "Editorial media platform",
+      "context": "Solo build, end to end",
+      "start": "2026",
+      "end": "Present",
+      "link": { "label": "maagfrance.fr", "href": "https://maagfrance.fr" },
+      "highlights": [
+        "Designed and built an online media outlet now in production entirely on my own — front end, API and infrastructure: 67,000 lines, 187 Astro components, 20 REST controllers.",
+        "Custom CMS driving 8 editorial content types through 51 admin screens, with a block editor of 15 typed block types including composite layouts.",
+        "Editorial placement engine: the composition of the home page is itself an editable entity, each slot switching between manual selection and rule-based auto-fill.",
+        "Express.js API on Firebase / Firestore, Sharp image pipeline, 9 versioned migrations (dry-run / apply), Stripe subscriptions, GDPR banner, technical SEO, Docker → Cloud Run with GitHub Actions CI."
+      ]
+    },
+    {
+      "id": "robofleet",
+      "name": "Robofleet",
+      "tagline": "Robot fleet management",
+      "context": "Freelance mission · team of 3",
+      "start": "09 / 2025",
+      "end": "11 / 2025",
+      "highlights": [
+        "Management and monitoring interface built with React 18 and Mantine Core.",
+        "Stripe billing with recurring subscriptions, Prisma data modelling, and a GitHub Actions CI/CD pipeline deploying over SSH."
+      ]
+    },
+    {
+      "id": "wurkspaces",
+      "name": "wurkspaces.dev",
+      "tagline": "Bilingual showcase site",
+      "context": "Client mission",
+      "start": "2025",
+      "link": { "label": "wurkspaces.dev", "href": "https://www.wurkspaces.dev" },
+      "highlights": [
+        "Bilingual (FR / EN) showcase site in Astro, Alpine.js and Tailwind, with a GDPR cookie banner built as a reusable Astro module."
+      ]
+    }
+  ],
+  "previous": {
+    "title": "Previous career — production & client relations",
+    "note": "Nearly two decades of production management and client relations before moving into code.",
+    "items": [
+      {
+        "role": "Client relations officer",
+        "company": "Executive Hotel",
+        "location": "Gennevilliers, France",
+        "period": "2018 – 2022"
+      },
+      {
+        "role": "Production assistant, film & TV",
+        "company": "Ezra, Eaux Vives, Fechner",
+        "location": "Paris, France",
+        "period": "2017 – 2018"
+      },
+      {
+        "role": "CGI production & assistant director",
+        "company": "Studio GRAD, Ball-Park",
+        "location": "Moscow, Russia",
+        "period": "2010 – 2015"
+      },
+      {
+        "role": "Marketing manager",
+        "company": "Geodis RUS",
+        "location": "Moscow, Russia",
+        "period": "2005 – 2010"
+      }
+    ]
+  }
+}

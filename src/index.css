@@ -16,6 +16,7 @@
   --bg: #0b0c10; /* page background */
   --surface: #1f2833; /* cards, modals, tiles, date boxes */
   --surface-border: transparent; /* tile outline; only needed in light mode */
+  --divider: #2e3a47; /* hairline separators drawn on --surface */
   --text: #c5c6c7; /* primary body text */
   --text-muted: #8b8b8b; /* secondary text */
   --text-dim: #666; /* tertiary text, card descriptions */
@@ -114,6 +115,7 @@ h2 {
     --bg: #f7f5ef;
     --surface: #ffffff;
     --surface-border: #e4e0d4;
+    --divider: #e4e0d4;
     --text: #1f2833;
     --text-muted: #5c6670;
     --text-dim: #5c6670;
