@@ -78,6 +78,19 @@ export function initSkillCloudAnimation() {
     loader.load(
       url,
       (texture) => {
+        // An SVG with no width/height attribute decodes to a 0-sized image.
+        // WebGL then rejects the upload with "texSubImage2D: bad image data",
+        // which says nothing about which file is at fault - so name it here
+        // and skip it instead of handing WebGL something it cannot use.
+        const image = texture.image as { width?: number; height?: number };
+        if (!image?.width || !image?.height) {
+          console.warn(
+            `Icon ${url} has no intrinsic size (an SVG needs width and height, not just a viewBox) - skipping`,
+          );
+          texture.dispose();
+          return;
+        }
+
         let position;
         let attempts = 0;
         const MAX_ATTEMPTS = 50;
