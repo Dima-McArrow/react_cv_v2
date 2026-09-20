@@ -14,7 +14,10 @@
   content: "";
   inset: -3px;
   border-radius: inherit;
-  background: conic-gradient(var(--accent) var(--fill), transparent var(--fill));
+  background: conic-gradient(
+    var(--accent) var(--fill),
+    transparent var(--fill)
+  );
   transition: --fill 0.6s ease-in-out;
 }
 
@@ -55,7 +58,10 @@
 
 .the_link-container:hover::after {
   --fill: 100%;
-  background: conic-gradient(var(--accent) var(--fill), transparent var(--fill));
+  background: conic-gradient(
+    var(--accent) var(--fill),
+    transparent var(--fill)
+  );
 }
 
 .the_link > svg path {

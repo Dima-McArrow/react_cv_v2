@@ -57,7 +57,10 @@
       "tagline": "Bilingual showcase site",
       "context": "Client mission",
       "start": "2025",
-      "link": { "label": "wurkspaces.dev", "href": "https://www.wurkspaces.dev" },
+      "link": {
+        "label": "wurkspaces.dev",
+        "href": "https://www.wurkspaces.dev"
+      },
       "highlights": [
         "Bilingual (FR / EN) showcase site in Astro, Alpine.js and Tailwind, with a GDPR cookie banner built as a reusable Astro module."
       ]

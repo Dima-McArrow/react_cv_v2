@@ -49,11 +49,15 @@ form {
   background-color: transparent;
   caret-color: var(--accent-strong);
   color: var(--text-bright);
-  font-family: Roboto Mono, monospace;
+  font-family:
+    Roboto Mono,
+    monospace;
 }
 
 .name-input_wrapper input::placeholder {
-  font-family: Roboto Mono, monospace;
+  font-family:
+    Roboto Mono,
+    monospace;
 }
 
 .name-input_wrapper input:focus {
@@ -79,11 +83,15 @@ form {
   background-color: transparent;
   caret-color: var(--accent-strong);
   color: var(--text-bright);
-  font-family: Roboto Mono, monospace;
+  font-family:
+    Roboto Mono,
+    monospace;
 }
 
 .email-input_wrapper input::placeholder {
-  font-family: Roboto Mono, monospace;
+  font-family:
+    Roboto Mono,
+    monospace;
 }
 
 .email-input_wrapper input:focus {
@@ -108,7 +116,9 @@ form {
   background-color: transparent;
   caret-color: var(--accent-strong);
   color: var(--text-bright);
-  font-family: Roboto Mono, monospace;
+  font-family:
+    Roboto Mono,
+    monospace;
   resize: none;
 }
 

@@ -5,7 +5,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 export function initSkillCloudAnimation() {
   // Create the canvas element dynamically
   const canvasContainer = document.querySelector<HTMLDivElement>(
-    "#skill_cloud_container"
+    "#skill_cloud_container",
   )!;
 
   // Check if a canvas already exists
@@ -22,7 +22,7 @@ export function initSkillCloudAnimation() {
     75,
     window.innerWidth / window.innerHeight,
     0.1,
-    1000
+    1000,
   );
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true });
   renderer.setSize(window.innerWidth, window.innerHeight);
@@ -37,7 +37,7 @@ export function initSkillCloudAnimation() {
   // Helper function to create icons
   function createIcon(
     texture: THREE.Texture,
-    position: THREE.Vector3
+    position: THREE.Vector3,
   ): THREE.Mesh {
     const planeGeometry = new THREE.PlaneGeometry(1, 1);
     const planeMaterial = new THREE.MeshBasicMaterial({
@@ -87,7 +87,7 @@ export function initSkillCloudAnimation() {
 
         if (attempts >= MAX_ATTEMPTS) {
           console.warn(
-            `Could not place icon ${url} after ${MAX_ATTEMPTS} attempts - skipping`
+            `Could not place icon ${url} after ${MAX_ATTEMPTS} attempts - skipping`,
           );
           return;
         }
@@ -95,13 +95,13 @@ export function initSkillCloudAnimation() {
         const icon = createIcon(texture, position);
         iconGroup.add(icon);
         console.log(
-          `Successfully placed icon: ${url} after ${attempts} attempts`
+          `Successfully placed icon: ${url} after ${attempts} attempts`,
         );
       },
       undefined,
       (err) => {
         console.error("Error loading texture:", err);
-      }
+      },
     );
   }
 

@@ -28,21 +28,25 @@ A modern, interactive CV/Resume built with React, TypeScript, and Three.js. This
 ## 🏃‍♂️ Getting Started
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/dima-mcarrow/react_cv_v2.git
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start development server:
+
 ```bash
 npm run dev
 ```
 
 4. Build for production:
+
 ```bash
 npm run build
 ```

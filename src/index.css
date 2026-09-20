@@ -34,7 +34,9 @@
   --code-value: #d1bd06;
   --code-fn: #6ae651;
 
-  font-family: Roboto Mono, monospace;
+  font-family:
+    Roboto Mono,
+    monospace;
   line-height: 1.5;
   font-weight: 400;
 
@@ -133,4 +135,3 @@ h2 {
     --code-fn: #15803d;
   }
 }
-

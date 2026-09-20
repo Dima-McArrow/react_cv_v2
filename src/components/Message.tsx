@@ -10,26 +10,26 @@ export const TypewriterComponent = () => {
             .changeDelay(70)
             .pauseFor(2200)
             .typeString(
-              '<code>const <span class="whoAmI">whoAmI</span> = {<span class="dm_const">Dima Makarov</span>};</code>'
+              '<code>const <span class="whoAmI">whoAmI</span> = {<span class="dm_const">Dima Makarov</span>};</code>',
             )
             .pauseFor(1500)
             .callFunction(() => {
               // Manually clear content instantly
               const typewriterContainer = document.querySelector(
-                ".Typewriter__wrapper"
+                ".Typewriter__wrapper",
               );
               if (typewriterContainer) {
                 typewriterContainer.innerHTML = ""; // Clear text instantly
               }
             })
             .typeString(
-              '<code>console.<span class="console_log">log</span>(<span class="whoAmI">whoAmI</span>);</code>'
+              '<code>console.<span class="console_log">log</span>(<span class="whoAmI">whoAmI</span>);</code>',
             )
             .pauseFor(1000)
             .callFunction(() => {
               // Manually clear content instantly
               const typewriterContainer = document.querySelector(
-                ".Typewriter__wrapper"
+                ".Typewriter__wrapper",
               );
               if (typewriterContainer) {
                 typewriterContainer.innerHTML = ""; // Clear text instantly
@@ -48,7 +48,7 @@ export const TypewriterComponent = () => {
                 from business to cinema and now to web development, reflects my
                 commitment to creativity, service, and lifelong learning.
                 `,
-              null
+              null,
             )
             .pauseFor(2500)
             .stop()
