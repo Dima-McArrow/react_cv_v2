@@ -37,6 +37,10 @@
   /* The single vertical rhythm of the page. Change it here, nowhere else. */
   --section-gap: 8rem;
 
+  /* The header is position: absolute, so it takes up no space in the flow.
+     The first section has to leave room for it by hand. */
+  --header-height: 7rem;
+
   /* typewriter "code" colours */
   --code-text: #fff;
   --code-ident: #f78cee;
@@ -108,8 +112,13 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* This was `line-height: 5`, which built a 120px line box around 24px of text
+   and put ~48px of untouchable space above and below every section title.
+   It read as a huge margin that was nowhere to be found in the margin. The
+   space below a title is now an explicit margin instead. */
 h2 {
-  line-height: 5;
+  line-height: 1.2;
+  margin: 0 0 2rem 0;
 }
 
 .brackets {

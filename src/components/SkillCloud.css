@@ -8,8 +8,13 @@
   position: relative;
 }
 
+/* The title is taken out of the flow and laid over the canvas, so its own top
+   edge does not move - but the glyphs inside it used to be pushed down by the
+   half-leading of `h2 { line-height: 5 }`, about 2.85rem. That leading is gone
+   now, so the same amount comes back as padding and the title stays put. */
 .skill_cloud_title {
   position: absolute;
+  padding-top: 2.85rem;
 }
 
 #skill_cloud_container {
