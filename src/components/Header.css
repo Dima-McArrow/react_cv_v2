@@ -17,6 +17,11 @@
   display: none;
 }
 
+/* Glows on paper, flat on the dark background */
+.header_container-mobile a {
+  filter: var(--mobile-logo-filter);
+}
+
 svg.logo path {
   fill: transparent;
   stroke: var(--text);

@@ -28,6 +28,12 @@
   --backdrop: rgba(0, 0, 0, 0.5); /* modal backdrop */
   --glow-logo: #edead0; /* header logo hover glow */
 
+  /* Not colours, but they differ per theme: the portrait is greyscale on the
+     dark background and full colour on paper, and the mobile logo only glows
+     in light mode. */
+  --portrait-filter: grayscale(100%);
+  --mobile-logo-filter: none;
+
   /* typewriter "code" colours */
   --code-text: #fff;
   --code-ident: #f78cee;
@@ -128,6 +134,9 @@ h2 {
     --tag: #c2410c;
     --backdrop: rgba(31, 40, 51, 0.45);
     --glow-logo: #0f766e;
+
+    --portrait-filter: none;
+    --mobile-logo-filter: drop-shadow(0 0 0.5em var(--accent));
 
     --code-text: #1f2833;
     --code-ident: #9333ea;
