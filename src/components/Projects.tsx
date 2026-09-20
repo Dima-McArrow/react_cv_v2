@@ -1,7 +1,7 @@
 import "./Projects.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 import content from "../content/projects.json";
 
@@ -39,12 +39,37 @@ type ProjectsContent = {
 
 const { title, intro, items } = content as ProjectsContent;
 
-// The cards wrap two per row. An odd last card therefore sits alone and
-// centred, and sliding it in from the side reads as a mistake - there is
+// Same breakpoint the stylesheet uses to stack the cards
+const MOBILE_QUERY = "(max-width: 768px)";
+
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(
+    () => window.matchMedia(MOBILE_QUERY).matches,
+  );
+
+  useEffect(() => {
+    const query = window.matchMedia(MOBILE_QUERY);
+    const onChange = (event: MediaQueryListEvent) => setIsMobile(event.matches);
+    query.addEventListener("change", onChange);
+    return () => query.removeEventListener("change", onChange);
+  }, []);
+
+  return isMobile;
+};
+
+// On a wide screen the cards wrap two per row, so an odd last card sits alone
+// and centred - sliding it in from the side reads as a mistake, since there is
 // nothing beside it to slide past. It rises from the bottom instead.
-const scrollAnimation = (project: Project, index: number, total: number) => {
+// Stacked one per row on mobile, every card is alone and the alternating
+// sides become the rhythm of the section, so the exception does not apply.
+const scrollAnimation = (
+  project: Project,
+  index: number,
+  total: number,
+  isMobile: boolean,
+) => {
   if (project.aos) return project.aos;
-  if (index === total - 1 && total % 2 === 1) return "fade-up";
+  if (!isMobile && index === total - 1 && total % 2 === 1) return "fade-up";
   return index % 2 === 0 ? "slide-right" : "slide-left";
 };
 
@@ -65,9 +90,17 @@ const GithubIcon = () => (
 );
 
 export const Projects = () => {
+  const isMobile = useIsMobile();
+
   useEffect(() => {
     AOS.init({ duration: 1000 }); // Initialize AOS with custom settings
   }, []);
+
+  // AOS reads data-aos once, when it collects the elements. Crossing the
+  // breakpoint rewrites that attribute, so it has to collect them again.
+  useEffect(() => {
+    AOS.refreshHard();
+  }, [isMobile]);
 
   return (
     <section id="projects" className="section_projects">
@@ -81,7 +114,7 @@ export const Projects = () => {
           {items.map((project, index) => (
             <div
               key={project.id}
-              data-aos={scrollAnimation(project, index, items.length)}
+              data-aos={scrollAnimation(project, index, items.length, isMobile)}
               className="card"
             >
               <div className="card-image_wrapper">
