@@ -34,6 +34,9 @@
   --portrait-filter: grayscale(100%);
   --mobile-logo-filter: none;
 
+  /* The single vertical rhythm of the page. Change it here, nowhere else. */
+  --section-gap: 8rem;
+
   /* typewriter "code" colours */
   --code-text: #fff;
   --code-ident: #f78cee;
@@ -111,6 +114,28 @@ h2 {
 
 .brackets {
   color: var(--text);
+}
+
+/* ---------------------------------------------------------------------------
+   Page rhythm. Every section is as tall as its own content and separated from
+   the next by exactly one gap. Section stylesheets must not set vertical
+   margins of their own - that is what made the spacing uneven before.
+   The skill cloud is the one section that keeps min-height: 100vh, because
+   its WebGL canvas is sized to the viewport.
+   --------------------------------------------------------------------------- */
+main > section,
+main > footer {
+  margin-top: var(--section-gap);
+}
+
+main > section:first-of-type {
+  margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --section-gap: 4rem;
+  }
 }
 
 /* ---------------------------------------------------------------------------

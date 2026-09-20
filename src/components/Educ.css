@@ -1,11 +1,9 @@
 .section_education {
-  margin: 13rem auto 0 auto;
   display: flex;
   flex-direction: column;
   width: 95%;
   align-items: center;
   user-select: none;
-  min-height: 100vh;
 }
 
 .educ_wrapper {

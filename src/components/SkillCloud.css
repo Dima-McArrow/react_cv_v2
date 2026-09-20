@@ -4,7 +4,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 20px;
   user-select: none;
   position: relative;
 }
