@@ -5,9 +5,12 @@
   letter-spacing: 0.15em;
 }
 
+/* min-height, not height: the box still reserves room so the layout does not
+   jump while the text types itself in, but it can grow when the summary gets
+   longer instead of spilling over whatever follows it. */
 .typewriterText_div {
   width: 30rem;
-  height: 30rem;
+  min-height: 30rem;
   text-align: left;
 }
 
@@ -30,7 +33,7 @@
 @media screen and (max-width: 768px) {
   .typewriterText_div {
     width: 22rem;
-    height: 37rem;
+    min-height: 34rem;
     text-align: left;
   }
 }

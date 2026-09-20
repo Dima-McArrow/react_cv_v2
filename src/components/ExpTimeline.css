@@ -290,7 +290,9 @@
   }
   .timeline {
     width: 100%; /* Full width on mobile */
-    margin: 0;
+    /* keep the gap under .exp_current: a bare `margin: 0` here used to wipe
+       the margin-top set on .timeline above */
+    margin: 3rem 0 0 0;
   }
 
   .timeline::before {

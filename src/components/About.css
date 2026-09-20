@@ -147,23 +147,19 @@ article {
   align-items: center;
 }
 
-button.download_cv {
+/* Guarantees a gap after the typewriter block, whatever the summary's length */
+.download_cv {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  margin-top: 2rem;
 }
 
-button.download_cv:focus {
+a.cta-button:focus-visible {
   outline: none;
   border: 1px solid var(--accent-strong);
   transform: scale(0.95);
-}
-
-button.download_cv:hover {
-  filter: drop-shadow(0 0 0.5em var(--accent-strong));
-  color: var(--accent-strong);
-  border-color: var(--accent-strong);
 }
 
 a.cta-button {
