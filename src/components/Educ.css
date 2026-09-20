@@ -9,25 +9,30 @@
 }
 
 .educ_wrapper {
-  width: 80%;
+  width: 100%;
   margin-bottom: 3rem;
 }
 
 .educ-cards_wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
 }
 
+/* No fixed height: the card grows with its title, and the row still ends up
+   even because a flex item without a height stretches to the tallest one. */
 .educ-card {
-  width: 17rem;
-  height: 30rem;
+  width: 21rem;
+  max-width: 100%;
+  min-height: 34rem;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  gap: 1.5rem;
   will-change: transform;
   transition: transform 0.5s;
   background-color: var(--surface);
@@ -40,69 +45,51 @@
   text-align: center;
   cursor: pointer;
   user-select: none;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 2rem 1.25rem 1.5rem 1.25rem;
 }
 
 .educ-card h3 {
   color: var(--accent);
-  margin-bottom: 2rem;
-  padding: 0.3rem;
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.4;
 }
 
-.educ_card_title,
+/* The title takes whatever room it needs; everything below it is fixed, so
+   the logos still line up across the three cards. */
+.educ_card_title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 auto;
+}
+
 .educ_card_logo,
-.educ_card_logo--isg,
 .educ_card_date,
 .educ_card_country {
-  height: 25%;
-  display: flex;
-  justify-content: center;
-  align-items: self-end;
-}
-
-.educ_card_card_title {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 0 0 auto;
 }
 
-.educ_card_card_logo {
-  height: 40%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.educ_card_logo {
+  height: 9rem;
 }
 
-.educ_card_logo--isg {
-  height: 25%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.educ_card_date p {
+  margin: 0;
 }
 
 .educ_card_logo img {
-  width: 90%;
+  max-width: 90%;
+  max-height: 100%;
+  width: auto;
   border-radius: 5px;
 }
 
 .educ_card_logo--isg img {
-  width: 30%;
-}
-
-.educ_card_date {
-  height: 15%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.educ_card_country {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  max-width: 50%;
 }
 
 .country {

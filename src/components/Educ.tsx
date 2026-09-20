@@ -74,7 +74,6 @@ export const Educ = () => {
               <div className="educ_card_date">
                 <p>{item.date}</p>
               </div>
-              <br />
               <div className="educ_card_country">
                 <span className="country">{item.country}</span>
               </div>
