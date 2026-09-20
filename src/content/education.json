@@ -1,0 +1,37 @@
+{
+  "title": "education",
+  "modalCta": "Visit school website",
+  "modalClose": "Close",
+  "items": [
+    {
+      "id": "studi",
+      "cardTitle": "Professional title (TP) level 5, Web and mobile web developer",
+      "school": "Studi",
+      "logo": "studi",
+      "date": "03/2023 - 06/2024",
+      "country": "France",
+      "description": "Professional title (TP) level 5, Web and mobile web developer.",
+      "website": "https://studi.fr/"
+    },
+    {
+      "id": "mitro",
+      "cardTitle": "Higher National Diploma, Film/Video and Photographic Arts",
+      "school": "Moscow Institute of Television and Radio Broadcasting \"Ostankino\" (MITRO)",
+      "logo": "mitro",
+      "date": "09/2007 - 05/2010",
+      "country": "Russia",
+      "description": "Higher National Diploma, Film/Video and Photographic Arts.",
+      "website": "https://www.mitro-tv.ru/tv-school/"
+    },
+    {
+      "id": "isg",
+      "cardTitle": "Bachelor of Business Administration (BBA), Marketing",
+      "school": "ISG Institut Supérieur de Gestion",
+      "logo": "isg",
+      "date": "05/2000 - 06/2003",
+      "country": "France",
+      "description": "Bachelor of Business Administration (BBA), Marketing.",
+      "website": "https://www.isg.fr/"
+    }
+  ]
+}

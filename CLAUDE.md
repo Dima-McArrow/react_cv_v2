@@ -67,9 +67,13 @@ global box-sizing reset and the border would otherwise grow the tile by 2px.
 
 ## Known rough edges (don't "fix" silently, mention them first)
 
-- `Educ.tsx` and `MobileNav.tsx` build DOM with `document.createElement` +
-  `innerHTML` inside `useEffect`/click handlers instead of using React state.
-  Works, but it's imperative DOM manipulation living inside React.
+- `MobileNav.tsx` still builds its menu with `document.createElement` +
+  `innerHTML` inside a `useEffect` instead of using React state. Works, but
+  it's imperative DOM manipulation living inside React. `Educ.tsx` used to do
+  the same and has been converted; `MobileNav` is the last one.
+- The education modal uses `role="dialog"` rather than a native `<dialog>`,
+  and does not trap focus. Escape and the Close button are the keyboard paths
+  out.
 - `public/svg/` holds 19 icons that the skill cloud no longer lists (aws,
   blender, debian, gitlab, heroku, jquery, material-ui, mongodb, mysql,
   namecheap, php, powershell, python, sass, sqlite, trello, vim, windows, wp).
