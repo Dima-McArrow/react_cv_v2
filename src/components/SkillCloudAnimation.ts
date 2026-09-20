@@ -10,6 +10,11 @@ const icons = cloudContent.icons.map(
   (icon) => `${import.meta.env.BASE_URL}${icon}`,
 );
 
+const CLOUD_RADII = { x: 8, y: 6, z: 6 };
+const ICON_SIZE = 1;
+const ICON_CORNER_RADIUS = ICON_SIZE / Math.sqrt(2);
+const FRAME_FILL = 0.98;
+
 export function initSkillCloudAnimation() {
   // Create the canvas element dynamically
   const canvasContainer = document.querySelector<HTMLDivElement>(
@@ -47,7 +52,7 @@ export function initSkillCloudAnimation() {
     texture: THREE.Texture,
     position: THREE.Vector3,
   ): THREE.Mesh {
-    const planeGeometry = new THREE.PlaneGeometry(1, 1);
+    const planeGeometry = new THREE.PlaneGeometry(ICON_SIZE, ICON_SIZE);
     const planeMaterial = new THREE.MeshBasicMaterial({
       map: texture, // Apply the texture
       transparent: true, // Allow transparency
@@ -98,9 +103,9 @@ export function initSkillCloudAnimation() {
         do {
           const phi = Math.acos(1 - 2 * Math.random());
           const theta = 2 * Math.PI * Math.random();
-          const x = 8 * Math.sin(phi) * Math.cos(theta); // Increased from 7 to 8
-          const y = 6 * Math.sin(phi) * Math.sin(theta); // Increased from 5 to 6
-          const z = 6 * Math.cos(phi); // Increased from 5 to 6
+          const x = CLOUD_RADII.x * Math.sin(phi) * Math.cos(theta);
+          const y = CLOUD_RADII.y * Math.sin(phi) * Math.sin(theta);
+          const z = CLOUD_RADII.z * Math.cos(phi);
           position = new THREE.Vector3(x, y, z);
           attempts++;
         } while (isTooClose(position, minDistance) && attempts < MAX_ATTEMPTS);
@@ -199,13 +204,23 @@ export function initSkillCloudAnimation() {
 
     renderer.setSize(width, height);
     camera.aspect = width / height;
-    // Fit the full cloud inside its content-sized canvas on narrow screens.
+    // The cloud stays shorter vertically as it rotates around its y-axis.
+    // Fit that ellipsoid instead of reserving space for a taller sphere.
     const verticalFov = THREE.MathUtils.degToRad(camera.fov / 2);
     const horizontalFov = Math.atan(Math.tan(verticalFov) * camera.aspect);
-    camera.position.z = Math.max(
-      7 / Math.sin(verticalFov),
-      9 / Math.sin(horizontalFov),
-    );
+    const orbitRadius = Math.max(CLOUD_RADII.x, CLOUD_RADII.z);
+    const fitDistance = (radius: number, halfFov: number) => {
+      const slope = Math.tan(halfFov) * FRAME_FILL;
+      return (
+        Math.hypot(radius / slope, orbitRadius) +
+        ICON_CORNER_RADIUS * Math.hypot(1, 1 / slope)
+      );
+    };
+    // Preserve the user's orbit direction when the viewport changes.
+    camera.position.setLength(Math.max(
+      fitDistance(CLOUD_RADII.y, verticalFov),
+      fitDistance(orbitRadius, horizontalFov),
+    ));
 
     camera.updateProjectionMatrix();
   }
